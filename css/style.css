@@ -165,9 +165,24 @@ a{
     color:white !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
+.badge:hover{
+    color:white !important;
+}
 /* thanh điều hướng */
 .navigation-section{
     float:left;
     width: 100%;
     background-color:yellow;
 }
+
+
+
+/* all */
+a:hover{
+    color:rgb(255, 102, 0) !important;
+    text-decoration: none !important;
+}
+.endpost {
+    border-top: 1px dashed #494845 !important;
+  }
+  
