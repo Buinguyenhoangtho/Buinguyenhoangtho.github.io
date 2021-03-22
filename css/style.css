@@ -23,8 +23,26 @@ pre > code {
 .post-wrapper{
     font-family: 'Noto Serif', serif;
 }
-
+img { 
+    
+    float:left;
+    width:100%;
+}
 /* main-body */
+h2{
+    /* padding:20px !important; */
+    font-size:30px !important ;
+    font-weight: bold ! important;
+}
+h3{
+    margin-top:20px !important;
+    padding-left:30px !important;
+    font-size:20px !important ;
+    font-weight: bold ! important;
+}
+h3::after{
+    content:":"
+}
 .post-wrapper--title{
     float:left;
     width:100%;
@@ -72,14 +90,17 @@ pre > code {
 }
 /* mô tả */
 /* single-post */
+a{
+    color:black !important;
+}
 .single-wrapper{
     font-family: 'Noto Serif', serif;
 }
 .single-wrapper--title{
     text-align: center;
-    height:40px;
-    line-height: 50px;
-    
+    height:100px;
+    line-height: 100px;
+    /* padding-bottom: 80px; */
 }
 .single-wrapper--title a{
     color:black !important;
@@ -135,8 +156,18 @@ pre > code {
 .navbar{
     float:right;
 }
-.nav-item-social{
-    /* float:right; */
-    /* width:100%; */
-    /* background-color: blue; */
+
+/* footer */
+.main-footer{
+    font-family: 'Noto Serif', serif;
+}
+.badge{
+    color:white !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+/* thanh điều hướng */
+.navigation-section{
+    float:left;
+    width: 100%;
+    background-color:yellow;
 }
