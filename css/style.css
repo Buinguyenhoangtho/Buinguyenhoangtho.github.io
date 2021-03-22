@@ -1,0 +1,142 @@
+/* nav */
+nav{
+    font-family: 'Noto Serif', serif;
+}
+
+.navbar {
+    color: black;
+}
+.img{
+    width:150px;
+    
+}
+code{
+    max-width:100%;
+    width:100%;
+}
+/* single.html */
+/* bài viết */
+
+pre > code {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+}
+.post-wrapper{
+    font-family: 'Noto Serif', serif;
+}
+
+/* main-body */
+.post-wrapper--title{
+    float:left;
+    width:100%;
+    font-size:20px;
+    
+}
+.post-wrapper--title a{
+    color:black;
+}
+.post-wrapper--summary{
+    width:100%;
+}
+.post-wrapper--date{
+    font-size:12px;
+    /* font-weight: 300; */
+    
+    /* color:red; */
+}
+.date{
+    /* float:right; */
+    float:left;
+    width:100%;
+    font-size:13px;
+    /* font-weight: normal; */
+}
+.line {
+    float:left;
+    width:100%;
+    border-bottom:1px solid red;        
+  }
+  /* tag */
+  .post-wrapper--tags{
+      font-size:12px;
+      color:#212529;
+      margin-top:10px;
+  }
+  .post-wrapper--tags a{
+      color:#212529;
+      
+  }
+  /* danh mục */
+  .categories-items{
+    font-size:12px;
+    color:white;
+}
+/* mô tả */
+/* single-post */
+.single-wrapper{
+    font-family: 'Noto Serif', serif;
+}
+.single-wrapper--title{
+    text-align: center;
+    height:40px;
+    line-height: 50px;
+    
+}
+.single-wrapper--title a{
+    color:black !important;
+}
+/* header-main */
+/* avatar */
+.avatar{
+    width:150px;
+}
+.main-header{
+    font-family: 'Noto Serif', serif;
+    font-size:20px;font-weight: 700; text-align: center;
+
+}
+.main-header--intro{
+    font-family: 'Noto Serif', serif;
+    text-align: center;
+    font-weight: bold;
+    margin-top:20px;
+}
+.post-card{
+    border-bottom:1px solid aliceblue;
+    /* background-color:red; */
+}
+
+/* tags */
+.tags-wrapper{
+    font-family: 'Noto Serif', serif;
+    list-style: none;
+}
+.tags-wrapper--intro{
+    font-weight: bold;
+    font-size:30px;
+}
+/* terms */
+.term-wrapper{
+    margin-top:40px;
+    justify-content: space-around;
+}
+.term-wrapper a{
+    color:black;
+}
+/* taxonomy */
+.taxonomy-wrapper{
+    float:left;
+    margin-top:1px;
+    font-family: 'Noto Serif', serif;
+}
+.taxonomy-items{
+    float:left;
+    text-align: center;
+}
+.navbar{
+    float:right;
+}
+.nav-item-social{
+    /* float:right; */
+    /* width:100%; */
+    /* background-color: blue; */
+}

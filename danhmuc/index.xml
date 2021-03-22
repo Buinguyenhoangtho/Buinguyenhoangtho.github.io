@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Danhmuc on Blog của tôi</title>
+    <link>http://buinguyenhoangtho.github.io/danhmuc/</link>
+    <description>Recent content in Danhmuc on Blog của tôi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>VN-vi</language><atom:link href="http://buinguyenhoangtho.github.io/danhmuc/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
