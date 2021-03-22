@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html lang="VN-vi"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/github.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    
+    
+    
+<title>Tự viết Chrome Extension thay đổi wallpaper theo từng ngày | Blog của tôi</title>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head><body><div class="container">
+    <div class="row">
+            
+            <nav class="navbar navbar-light navbar-expand-lg bg-light w-100">
+                <a class="navbar-brand" href="/" style="">Hoàng Thọ</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav">
+                        
+                        
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/the"> 🏷️ Thẻ</a>
+                          </li>
+                          
+                        
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ve-toi"> 😀Về tôi</a>
+                          </li>
+                          
+                        
+                        
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/buinguyenhoangtho?tab=repositories">
+                                Github
+                            </a> 
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://www.linkedin.com/in/b%C3%B9i-nguy%E1%BB%85n-ho%C3%A0ng-th%E1%BB%8D-2b136a1b0/">
+                             Linkedin
+                            </a>
+                          </li>
+                    </ul>
+                </div>
+            </nav>
+
+    </div>
+</div><main>
+
+
+<div class="container">
+    <div class="justify-content-around row">
+        <div class="col-md-8 single-wrapper">
+            
+            <p> <a href="/">&#8592; Quay về trang chủ</a></p>
+            <div class="text-center post-wrapper--tags">
+                
+                <a href="/the/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn">#Hướng dẫn</a>
+                
+            </div>
+            <h4 class="single-wrapper--title">Tự viết Chrome Extension thay đổi wallpaper theo từng ngày</h4>
+            
+            <div class="text-center single-wrapper-detail">
+                
+                <span class="date">📅
+                    28
+                    tháng một,2021
+                    
+                    | 691 từ
+                </span> 
+                
+                
+            </div>
+            <p class="single-wrapper--content"><h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Xin chào các bạn , trong lúc đang ngồi học thêm về Javascript thì may mắn thế nào lại tìm được file JSON của hệ thống thay đổi hình nền theo ngày của Bing (hay gọi là bing Daily Wallpaper). Thế là mình ngồi viết ra extension dựa vào nó. Toàn bộ Extesnion của mình hoàn toàn viết bằng Bootstrap,CSS và Ajax</p>
+<!-- raw HTML omitted -->
+<h2 id="cấu-trúc-extension">Cấu trúc extension</h2>
+<!-- raw HTML omitted -->
+<p><img src="https://imgur.com/5ckr7tx.jpg" alt="cấu trúc"></p>
+<ul>
+<li><strong>manifest.json</strong> : Khai báo thông tin extension, như tên extension, miêu tả v..v. Trong file <strong>manifest.json</strong> tại dòng
+<strong>chrome_url_overrides&quot;: { &ldquo;newtab&rdquo;: &ldquo;newtab.html&rdquo;},</strong> ở đây <strong>newtab.html</strong> chính là file HTML sẽ hiện lên khi bạn bật new tab</li>
+</ul>
+<p><strong>manifest.json</strong></p>
+<pre><code>{
+    &quot;name&quot;: &quot;Clone Bing Wallpaper&quot;,
+    &quot;description&quot;: &quot;Tôi viết app này dành cho mục đích cá nhân&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;incognito&quot;: &quot;split&quot;,
+    &quot;author&quot;:&quot;Bùi Nguyễn Hoàng Thọ&quot;,
+    &quot;chrome_url_overrides&quot;: { &quot;newtab&quot;: &quot;newtab.html&quot; }, 
+    &quot;manifest_version&quot;: 2,
+    &quot;permissions&quot;: [
+        &quot;*://*.bing.com/*&quot;,
+        &quot;http://*/*&quot;,
+        &quot;https://*/*&quot;
+    ],
+    &quot;background&quot;: {
+        &quot;scripts&quot;: [
+            &quot;background.js&quot;
+        ]
+    },
+    &quot;content_security_policy&quot;: &quot;script-src 'self' 'unsafe-eval'; object-src 'self'&quot;
+
+  }
+</code></pre><ul>
+<li><strong>Thư mục js</strong> : Nơi chứa các thư viện Javascript như <strong>Bootstrap, popup.js</strong></li>
+<li><strong>style.css</strong> : Nơi chỉnh sửa CSS của Extension</li>
+</ul>
+<h2 id="1--gọi-json">1- Gọi JSON</h2>
+<p>Extension được hoạt động dựa trên JSON nên tất nhiên là phải gọi nó ra chớ :heart:
+Trong thự mục js , tạo file popup.js và paste</p>
+<pre><code>$.ajax({ 
+   type: 'GET', 
+   url: 'https://www.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1&amp;mkt=en-US', 
+   crossDomain: true,
+   dataType: 'json', 
+   success: function (data) { 
+       var title = data.images[0].title;
+       console.log(title);
+      //  ảnh url
+       var url = data.images[0].url;
+      //  url ảnh bing
+       var img_url = &quot;https://bing.com&quot;+ url;
+      //  console.log(finish_url);
+      //  thêm url vào ảnh 
+      $('#wallpaper').html(`&lt;img src='${img_url}'&gt;`);
+
+   },
+   error:function(error){
+      console.log(error);
+   }
+});
+</code></pre><p>Trong đó :</p>
+<blockquote>
+<ul>
+<li><strong>var url</strong>: Khai báo URL của json</li>
+<li><strong>dataType</strong> : kiểu dữ liệu</li>
+</ul>
+</blockquote>
+<p>Nếu thành công, web-browser sẽ gọi lên Ajax và truyền giá trị vào biến url, sau đó sẽ render lên trang <strong>newtab,html</strong> thông qua hàm .html của Jquery</p>
+<p>Khi thành công
+<img src="https://i.imgur.com/bkK2uPE.png" alt="console-log"></p>
+<h2 id="2--thêm-các-chi-tiết-phụ">2- Thêm các chi tiết phụ</h2>
+<p>Vậy là phần chính của extension đã xong. Đến lúc thêm thắt một chút chi tiết phụ để trang trí extension. Mục tiêu của mình chỉ là hiện search box, ngày tháng năm trên máy tính.</p>
+<h3 id="thêm-search-box-google">Thêm search box google</h3>
+<p>Ở đây là mình viết bằng các class Bootstrap. Nếu bạn nào chưa biết nhiều về Bootstrap thì hãy nhấn vào
+<a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" target="_blank" rel="noopener">đây</a>
+<i class="fa fa-link" aria-hidden="true"></i> để tìm hiểu</p>
+<pre><code>&lt;form action=&quot;https://www.google.com/search&quot; class=&quot;searchform&quot; method=&quot;get&quot; name=&quot;searchform&quot; target=&quot;_blank&quot;&gt;
+              &lt;div class=&quot;col-md-6 offset-md-3 input-group mb-3 &quot;&gt;
+                &lt;input type=&quot;text&quot;  class=&quot;form-control search-box&quot; placeholder=&quot;Tìm kiếm&quot; aria-label=&quot;tìm kiếm&quot; aria-describedby=&quot;basic-addon2&quot; name=&quot;q&quot;&gt;
+                &lt;div class=&quot;input-group-append&quot;&gt;
+                  &lt;div class=&quot;input-group-text&quot; id=&quot;basic-addon2&quot;&gt;
+                  &lt;i class=&quot;fa fa-google&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;    
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;/form&gt;
+</code></pre><p>Kết quả:</p>
+<p><img src="https://i.imgur.com/h2OT9nD.jpg" alt="step-3"></p>
+<h3 id="thêm-đồng-hồ">Thêm đồng hồ</h3>
+<p>Tiếp tục tạo ra <strong>date.js</strong> và <strong>time,js</strong> trong thư mục <strong>js</strong></p>
+<pre><code>// time.js : Hiện hệ thống thời gian. 
+// Phương thức getElementById trả về phần tử có thuộc tính ID là giá trị được chỉ định.
+var span = document.getElementById('time');
+
+function time() {
+  var d = new Date(); //khai báo thư viện xử lí thời gian 
+  var s = d.getSeconds(); // lấy ra số giây
+  var m = d.getMinutes(); // lấy ra số phút 
+  var h = d.getHours(); // lấy ra số giờ
+  span.textContent = 
+    (&quot;0&quot; + h).substr(-2) + &quot;:&quot; + (&quot;0&quot; + m).substr(-2) + &quot;:&quot; + (&quot;0&quot; + s).substr(-2);
+}
+
+setInterval(time, 1000);
+//setInterval là hàm thiết lập độ trễ cho các hàm được thực hiện lặp đi lặp lại
+</code></pre><h3 id="thêm-ngày-tháng">Thêm ngày tháng</h3>
+<p>Tương tự hàm hiện thời gian, cũng khai báo hàm để hiện ngày tháng năm. Tại <strong>js/time.js</strong></p>
+<pre><code>
+// hàm xử lí ngày tháng năm
+
+// tháng
+var thang = [&quot;tháng một&quot;, &quot;tháng hai&quot;, &quot;tháng ba&quot;, &quot;tháng tư&quot;, &quot;tháng năm&quot;, &quot;tháng sáu&quot;, &quot;tháng bảy&quot;, &quot;tháng tám&quot;, &quot;tháng chín&quot;, &quot;tháng mười&quot;, &quot;tháng mười một&quot;, &quot;tháng mười hai &quot;
+];
+// thứ
+var thu = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
+
+function checkTime() {
+    var date = new Date();
+var day = date.getDate();
+  var month = thang[date.getMonth()];
+  var weekday = thu[date.getDay()];
+  var year = date.getFullYear();
+  document.getElementById('day').innerHTML =  weekday+ &quot; &quot; + day +&quot; &quot; +month+ &quot;  &quot; + year;
+}
+setInterval(checkTime(), 1000);
+</code></pre><p>Kết quả :
+<img src="https://i.imgur.com/cxF4EOx.jpg" alt="final"></p>
+<h2 id="lời-kết">Lời kết</h2>
+<p>Vậy là xong, chỉ với một chút Bootstrap và Jquery/Ajax là bạn đã có thể tự tạo cho mình một extension tự động thay đổi theo ngày. Chúc các bạn thành công 💑💑</p>
+</p>
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+<hr class="my-4">
+<div class="container">
+    <div class="row">
+        <div class="my-sign mx-auto">
+            <span id="year"></span> Bùi Nguyễn Hoàng Thọ. 
+        </div>
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+                
+                    
+        
+    </div>
+</div></main>
+        
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+
+
+<script>hljs.highlightAll();</script>
+<script src="https://use.fontawesome.com/266465373f.js"></script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ghi nhớ on Blog của tôi</title>
+    <link>http://buinguyenhoangtho.github.io/the/ghi-nh%E1%BB%9B/</link>
+    <description>Recent content in Ghi nhớ on Blog của tôi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>VN-vi</language>
+    <lastBuildDate>Wed, 17 Feb 2021 06:19:23 +0000</lastBuildDate><atom:link href="http://buinguyenhoangtho.github.io/the/ghi-nh%E1%BB%9B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Object và Array có gì khác biệt (phần 1)</title>
+      <link>http://buinguyenhoangtho.github.io/bai-viet/javascript-array-objects/</link>
+      <pubDate>Wed, 17 Feb 2021 06:19:23 +0000</pubDate>
+      
+      <guid>http://buinguyenhoangtho.github.io/bai-viet/javascript-array-objects/</guid>
+      <description>Mở đầu Khi học và làm việc với Javascript, Array và Object có thể lưu trữ nhiều dữ liệu. Vậy Array và Object có gì khác nhau? Mini series sẽ được chia thành hai phần và sẽ cover đầy đủ lại kiến thức cơ bản cần phải nhớ khi làm việc với Array và Object.
+Mảng là gì? 1.1 Định nghĩa cơ bản về mảng :
+ Mảng (array) được sắp xếp theo thứ tự chuỗi giá trị.</description>
+    </item>
+    
+  </channel>
+</rss>

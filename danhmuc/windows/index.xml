@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WINDOWS on Blog của tôi</title>
+    <link>http://buinguyenhoangtho.github.io/danhmuc/windows/</link>
+    <description>Recent content in WINDOWS on Blog của tôi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>VN-vi</language>
+    <lastBuildDate>Tue, 09 Mar 2021 09:34:22 +0000</lastBuildDate><atom:link href="http://buinguyenhoangtho.github.io/danhmuc/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Độ lại giao diện cmder giống Ubuntu đến 95%</title>
+      <link>http://buinguyenhoangtho.github.io/bai-viet/do-lai-giao-dien-cmder-giong-ubuntu-den-95/</link>
+      <pubDate>Tue, 09 Mar 2021 09:34:22 +0000</pubDate>
+      
+      <guid>http://buinguyenhoangtho.github.io/bai-viet/do-lai-giao-dien-cmder-giong-ubuntu-den-95/</guid>
+      <description>Lời nói đầu Chào các bác, hôm nay tôi sẽ viết một bài ngắn gọn về cách tôi đã hô biến giao diện cmder mặc định sang Ubuntu (giống đến 95%) như thế nào nhé 😁 😁 !
+À trước khi bắt đầu, mình sẽ nêu ngắn gọn những lí do chính vì sao tôi lại chọn sử dụng Cmder.
+ Nhẹ, không cần cài đặt ( chỉ cần tải về và extract ra xong sử dụng) Tích hợp sẵn Git (coder sẽ rất thích cái này) Hỗ trợ ghi tiếng Việt tốt hơn cả Powershell hay cmd mặc định của Windows Tuỳ biến nhiều Thích hợp dành cho những ai từng thử Terminal của Ubuntu ( hoặc không :v )  Chỉnh sửa background Cmder cho phép các bạn thay đổi nền mặc định của nó thành bất cứ ảnh nào.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html lang="VN-vi"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/github.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    
+    
+    
+<title>Tạo thông báo cho web bằng Toasty | Blog của tôi</title>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head><body><div class="container">
+    <div class="row">
+            
+            <nav class="navbar navbar-light navbar-expand-lg bg-light w-100">
+                <a class="navbar-brand" href="/" style="">Hoàng Thọ</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav">
+                        
+                        
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/the"> 🏷️ Thẻ</a>
+                          </li>
+                          
+                        
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ve-toi"> 😀Về tôi</a>
+                          </li>
+                          
+                        
+                        
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/buinguyenhoangtho?tab=repositories">
+                                Github
+                            </a> 
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://www.linkedin.com/in/b%C3%B9i-nguy%E1%BB%85n-ho%C3%A0ng-th%E1%BB%8D-2b136a1b0/">
+                             Linkedin
+                            </a>
+                          </li>
+                    </ul>
+                </div>
+            </nav>
+
+    </div>
+</div><main>
+
+
+<div class="container">
+    <div class="justify-content-around row">
+        <div class="col-md-8 single-wrapper">
+            
+            <p> <a href="/">&#8592; Quay về trang chủ</a></p>
+            <div class="text-center post-wrapper--tags">
+                
+                <a href="/the/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn">#Hướng dẫn</a>
+                
+            </div>
+            <h4 class="single-wrapper--title">Tạo thông báo cho web bằng Toasty</h4>
+            
+            <div class="text-center single-wrapper-detail">
+                
+                <span class="date">📅
+                    27
+                    tháng một,2021
+                    
+                    | 1453 từ
+                </span> 
+                
+                
+            </div>
+            <p class="single-wrapper--content"><h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Chào các bạn, mỗi khi làm trang web thì ắt hẳn nhiều người lập trình thường hay viết vài câu thông báo cho người dùng biết kết quả các tiến trình họ đang làm. Ví dụ như đăng nhập, đăng kí, hay gửi thư&hellip; Đành rằng trong Javascript đã sẵn hàm alert() để đảm nhận việc đó rồi. Nhưng không, nhiệm vụ của một người lập trình Web là phải đem lại trải nhiệm người dùng tốt nhất có thể, với lại không một ai rảnh tay cứ bấm vào nút &ldquo;OK&rdquo; liên tục cả. Thành ra, để có thể có thể thu hút người dùng hơn thì hôm nay mình sẽ giới thiệu cho các bạn thư viện tạo thông báo mình mới tìm được hôm nay. Đó là <strong>Toasty.js</strong>
+<img src="https://i.imgur.com/fyExrP2.png" alt="main">
+Tác giả: egalink
+Trang chủ: <a href="http://jakim.me/Toasty.js/">http://jakim.me/Toasty.js/</a></p>
+<h2 id="cài-đặt-vào-sử-dụng">Cài đặt vào sử dụng</h2>
+<h3 id="cài-đặt">Cài đặt</h3>
+<p>Các bạn có thể cài đặt thông qua NPM aka Node Package Manager ( các bạn phải đặt NodeJS trong máy trước)</p>
+<blockquote>
+<p><code>npm i egalink-toasty.js</code></p>
+</blockquote>
+<p>Hoặc tải trực tiếp <a href="!https://codeload.github.com/egalink/Toasty.js/zip/master">tại đây</a>
+<i class="fa fa-link" aria-hidden="true"></i></p>
+<h3 id="thêm-vào-thư-viện">Thêm vào thư viện</h3>
+<pre><code>&lt;header&gt;
+&lt;!-- Khai báo trên head 2 --&gt;
+&lt;link href=&quot;dist/toasty.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;!-- script là để dưới thư viện jquery để tránh báo lỗi --&gt;
+&lt;script src=&quot;dist/toasty.min.js&quot;&gt;&lt;/script&gt;
+&lt;/header&gt;
+</code></pre><h3 id="sử-dụng">Sử dụng</h3>
+<p>Sau khi đã cài những thành phần cần thiết, bạn phải khai báo thư viện nó như sau :</p>
+<pre><code>&lt;script&gt;
+var toast = new Toasty();
+// Hiện thông báo bình thường
+toast.info(&quot;Một vài thông tin!&quot;);
+ // Hiện thông báo thành công
+toast.success(&quot;Thực thi thành công!&quot;);
+// Hiện cảnh báo
+toast.warning(&quot;Cảnh báo có khả năng xảy ra lỗi!&quot;);
+
+// Thông báo lỗi
+toast.error(&quot;Thực thi không thành công!&quot;);
+&lt;/script&gt; 
+</code></pre><p>Như các bạn đã thấy như ở trên, đó là cách khai báo của thư viện này, khá đơn giản phải không? Nhưng cái đó chỉ mới là bước đầu thôi.</p>
+<h2 id="chỉnh-sửa">Chỉnh sửa</h2>
+<p>Toastr cho phép người dùng có thể điều chỉnh thông báo một cách thoải mái nhất. Bạn có thể chỉnh sửa luôn cả CSS của thông báo. Phần sau mình sẽ đề cập đến việc này. Bây giờ hãy cùng xem qua những tính năng của thư viện này nhé</p>
+<pre><code>var options = {
+    //ghi chú: Class mặc định của Toasty, khuyến khích là cứ để mặc định, nếu thay đổi thì thư viện sẽ coi như bạn đang thiết lặp toàn bộ và tất cả các kiểu css, transtions... có sẵn sẽ bị mất đi.
+        classname: &quot;toast&quot;,
+    
+    transition: &quot;fade&quot;,
+    // transition: hiệu ứng hiện/đóng thông báo
+    
+   
+    duration: 4000,
+    // duration: mặc định là 4000 milisecond, là thời gian chờ của thông báo. Nếu chỉnh xuống 0 thì sẽ phụ thuộc vào độ dài của thông báo 
+
+    // enableSounds : (True hay False) 
+    Bật âm thanh thông báo. Không hỗ trợ cho các thiết bị điện thoại
+    
+    enableSounds: false,
+    autoClose: true,
+    // autoClose ( true hay False) - Tự động tắt thông báo hay không? 
+    // Progress-bar (true hay false) - tiến trình - Nếu option autoClose: true  
+    
+    progressBar: false,
+    // Toasty hỗ trợ cho việc thêm các âm thanh khác nhau cho từng loại thông báo.
+    Toasty đã cung cấp sẵn một vài âm thanh cơ bản trong thư mục dist.
+    sounds: {
+        info: &quot;./dist/sounds/info/1.mp3&quot;,
+        success: &quot;./dist/sounds/success/1.mp3&quot;,
+        warning: &quot;./dist/sounds/warning/1.mp3&quot;,
+        error: &quot;./dist/sounds/error/1.mp3&quot;,
+    },
+
+    // callback:
+    // chạy callback sau khi hiện ra thông báo bằng sự kiện onshow
+    onShow: function (type) {},
+
+    // callback:
+    // onHide function will be fired when a toast message disappears.
+    // chạy callback  sau khi thông báo biến mất
+    onHide: function (type) {},
+
+    prependTo: document.body.childNodes[0]
+};
+
+</code></pre><p>Sau khi chỉnh sửa các điều chỉnh trên, người cần phải khai báo theo cách này để hiện thông báo</p>
+<pre><code>var toast = new Toasty(options);
+// có thể khai báo để sử dụng cho toàn trang
+toast.configure(options);
+
+</code></pre><h3 id="tự-viết-transitions">Tự viết transitions</h3>
+<p>Toasty mặc định hỗ trợ đến 10 transition. Cụ thể :</p>
+<pre><code>fade slideLeftFade
+slideLeftRightFade
+slideRightFade
+slideRightLeftFade
+slideUpFade
+slideUpDownFade
+slideDownFade
+slideDownUpFade
+pinItUp
+pinItDow
+</code></pre><p>Thế nhưng bạn có thể tự tạo cho cho transtions theo ý mình bằng cách sau:</p>
+<ul>
+<li>Mở file <strong>toasty.css</strong></li>
+</ul>
+<pre><code>
+
+// ví dụ một transtiton có sẵn 
+.toast {
+    transition: 0.32s all ease-in-out;
+}
+
+/* a [fade] transition (DEFAULT TRANSITION IN THE PLUGIN): */
+.toast-container--fade {
+     right: 0;
+    bottom: 0;
+}
+.toast-container--fade .toast-wrapper { display: inline-block; }
+.toast.fade-init { opacity: 0; }
+.toast.fade-show { opacity: 1; }
+.toast.fade-hide { opacity: 0; }
+/* ------------------------------------------------------------------------- */
+</code></pre><p>Với cấu trúc có sẵn. Giờ mình sẽ tự tạo một transtition mới gọi là &ldquo;<strong>fade</strong>&rdquo;</p>
+<pre><code>.toast {
+    transition: 0.32s all ease-in-out;
+}
+
+/* a [scale] transition: */
+.toast-container--scale {
+     right: 0;
+    bottom: 0;
+}
+.toast-container--scale .toast-wrapper { display: inline-block; }
+.toast.scale-init { opacity: 0; transform: scale(0); }
+.toast.scale-show { opacity: 1; transform: scale(1); }
+.toast.scale-hide { opacity: 0; transform: scale(0); }
+</code></pre><ul>
+<li>Khai báo transition mới sau khi tạo</li>
+</ul>
+<pre><code>var toast = new Toasty();
+toast.transition(&quot;scale&quot;);
+
+toast.info(&quot;Khai báo transtion scale thành công&quot;);
+
+</code></pre><h3 id="css">CSS</h3>
+<pre><code>/* STYLE MẶC ĐỊNH */
+
+.toast-container {
+   position: fixed;
+   z-index: 999999;
+   pointer-events: none;
+}
+/* Container */
+.toast-container .toast-wrapper {
+   position: relative;
+}
+/* Hiện âm thanh . */
+/* Normally, this is a hidden wildcard: */
+.toast-container .toast-soundplayer {
+   display: none;
+   visibility: hidden;
+}
+
+/**
+* THÔNG BÁO :
+* -------------------------------------------------- */
+
+
+.toast {
+   position: relative;
+   pointer-events: none;
+   -webkit-transition: all 0.32s ease-in-out;
+      -moz-transition: all 0.32s ease-in-out;
+       -ms-transition: all 0.32s ease-in-out;
+        -o-transition: all 0.32s ease-in-out;
+           transition: all 0.32s ease-in-out;
+}
+
+/* informational toast class: */
+.toast--info {}
+
+/* successful toast class: */
+.toast--success {}
+
+/* warning toast class: */
+.toast--warning {}
+
+/* error toast class: */
+.toast--error {}
+
+/* this class is assigned to each toast message when autoClose
+* plugin option is set to BOOLEAN false. */
+/* Normally, this is a pointer events handler:*/
+.toast.close-on-click {
+   cursor: pointer;
+   pointer-events: auto;
+}
+
+/**
+* CSS THANH THỜI GIAN
+* -------------------------------------------------- */
+
+
+.toast-progressbar {
+   -webkit-transition: width 0s ease;
+      -moz-transition: width 0s ease;
+       -ms-transition: width 0s ease;
+        -o-transition: width 0s ease;
+           transition: width 0s ease;
+}
+
+/* progress bar color for each toast type: */
+.toast-progressbar--info {}
+.toast-progressbar--success {}
+.toast-progressbar--warning {}
+.toast-progressbar--error {}
+</code></pre><ul>
+<li>Viết lại css với tên class mới, gọi là alert <strong>.alert</strong></li>
+</ul>
+<pre><code>.alert-container {
+    position: fixed;
+    z-index: 999999;
+    pointer-events: none;
+
+    background-color: rgba(255,255,255, 0.32);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+/* the wrapper where the toast messages appends: */
+.alert-container .alert-wrapper {
+    position: relative;
+
+    display: inline-block;
+    margin: 0 auto;
+}
+/* the class that is assigned to the sound player. */
+/* Normally, this is a hidden wildcard: */
+.alert-container .alert-soundplayer {
+    display: none;
+    visibility: hidden;
+}
+
+/**
+ * Toast messages styles:
+ * -------------------------------------------------- */
+
+/* each toast message gets this style: */
+.alert {
+    position: relative;
+    pointer-events: none;
+    -webkit-transition: all 0.32s ease-in-out;
+       -moz-transition: all 0.32s ease-in-out;
+        -ms-transition: all 0.32s ease-in-out;
+         -o-transition: all 0.32s ease-in-out;
+            transition: all 0.32s ease-in-out;
+
+
+    display: block;
+    margin: 4% auto 0 auto;
+    padding: 2em 2em;
+    background-color: #fff;
+    color: #505050;
+    max-width: 100%;
+    font-size: 1.25em;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 1px 1px 12px 2px rgba(0,0,0, 0.32);
+}
+
+/* informational toast class: */
+.alert--info { color: #31708F; }
+
+/* successful toast class: */
+.alert--success { color: #3C763D; }
+
+/* warning toast class: */
+.alert--warning { color: #8A6D3B; }
+
+/* error toast class: */
+.alert--error { color: #A94442; }
+
+/* this class is assigned to each toast message when autoClose
+ * plugin option is set to BOOLEAN false. */
+/* Normally, this is a pointer events handler:*/
+.alert.close-on-click {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/**
+ * Progress bar styles:
+ * -------------------------------------------------- */
+
+/* each progress bar gets this style: */
+.alert-progressbar {
+    -webkit-transition: width 0s ease;
+       -moz-transition: width 0s ease;
+        -ms-transition: width 0s ease;
+         -o-transition: width 0s ease;
+            transition: width 0s ease;
+
+    position: absolute;
+    height: 4px;
+    width: 0%;
+    left: 0px;
+    bottom: 0px;
+    opacity: 0.5;
+}
+
+/* progress bar color for each toast type: */
+.alert-progressbar--info { background-color: #91C5F2; }
+.alert-progressbar--success { background-color: #A6CA8A; }
+.alert-progressbar--warning { background-color: #F2C779; }
+.alert-progressbar--error { background-color: #F5ACA6; }
+</code></pre><ul>
+<li>Việc thay đổi tên Class đồng nghĩa là các thuộc tính css và transtion sẽ mất hết vì thế cần phải viết lại toàn bộ transitions. Mình sẽ thử viết lại một class mới gọi là <strong>alert</strong>.</li>
+</ul>
+<pre><code>.alert {
+    transition: 0.32s all ease-in-out;
+}
+
+/* a [scale] transition: */
+.alert-container--scale {
+     right: 0;
+    bottom: 0;
+}
+.alert-container--scale .alert-wrapper { display: inline-block; }
+.alert.scale-init { opacity: 0; transform: scale(0); }
+.alert.scale-show { opacity: 1; transform: scale(1); }
+.alert.scale-hide { opacity: 0; transform: scale(0); }
+/* ------------------------------------------------------------------------- */
+</code></pre><p>Khai báo config để nhận class mới và transtion mới</p>
+<pre><code>var toast = new Toasty({
+        classname: &quot;alert&quot;,
+       insertBefore: false,
+       progressBar: true,
+       enableSounds: false
+});
+
+// gọi transtion mới
+toast.transition(&quot;scale&quot;);
+
+toast.info(&quot;Class Toastr và Scale Transtion.&quot;);
+</code></pre><p><a href="!http://jakim.me/Toasty.js/">DEMO</a>
+<i class="fa fa-link" aria-hidden="true"></i></p>
+<h2 id="kết-luận">Kết luận</h2>
+<p>Như vậy là mình đã xong review về thư viện Toasty này. Hãy follow <a href="!https://github.com/egalink/">tác giả</a>
+<i class="fa fa-link" aria-hidden="true"></i> để nhận thông tin cập nhật!</p>
+</p>
+            
+            
+        </div>
+    </div>
+</div>
+
+        
+<hr class="my-4">
+<div class="container">
+    <div class="row">
+        <div class="my-sign mx-auto">
+            <span id="year"></span> Bùi Nguyễn Hoàng Thọ. 
+        </div>
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+                
+                    
+        
+    </div>
+</div></main>
+        
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+
+
+<script>hljs.highlightAll();</script>
+<script src="https://use.fontawesome.com/266465373f.js"></script>
+    </body>
+</html>

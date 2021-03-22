@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DỰ ÁN on Blog của tôi</title>
+    <link>http://buinguyenhoangtho.github.io/danhmuc/d%E1%BB%B1-%C3%A1n/</link>
+    <description>Recent content in DỰ ÁN on Blog của tôi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>VN-vi</language>
+    <lastBuildDate>Thu, 28 Jan 2021 18:29:41 +0700</lastBuildDate><atom:link href="http://buinguyenhoangtho.github.io/danhmuc/d%E1%BB%B1-%C3%A1n/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tự viết Chrome Extension thay đổi wallpaper theo từng ngày</title>
+      <link>http://buinguyenhoangtho.github.io/bai-viet/bing-wallpaper-clone/</link>
+      <pubDate>Thu, 28 Jan 2021 18:29:41 +0700</pubDate>
+      
+      <guid>http://buinguyenhoangtho.github.io/bai-viet/bing-wallpaper-clone/</guid>
+      <description>Giới thiệu Xin chào các bạn , trong lúc đang ngồi học thêm về Javascript thì may mắn thế nào lại tìm được file JSON của hệ thống thay đổi hình nền theo ngày của Bing (hay gọi là bing Daily Wallpaper). Thế là mình ngồi viết ra extension dựa vào nó. Toàn bộ Extesnion của mình hoàn toàn viết bằng Bootstrap,CSS và Ajax
+Cấu trúc extension  manifest.json : Khai báo thông tin extension, như tên extension, miêu tả v.</description>
+    </item>
+    
+  </channel>
+</rss>

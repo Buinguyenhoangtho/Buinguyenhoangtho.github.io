@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hướng dẫn on Blog của tôi</title>
+    <link>http://buinguyenhoangtho.github.io/the/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn/</link>
+    <description>Recent content in Hướng dẫn on Blog của tôi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>VN-vi</language>
+    <lastBuildDate>Wed, 10 Feb 2021 18:29:41 +0700</lastBuildDate><atom:link href="http://buinguyenhoangtho.github.io/the/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Làm lời chào theo mốc thời gian trong ngày</title>
+      <link>http://buinguyenhoangtho.github.io/bai-viet/lam-loi-chao-theo-moc-thoi-gian-trong-ngay/</link>
+      <pubDate>Wed, 10 Feb 2021 18:29:41 +0700</pubDate>
+      
+      <guid>http://buinguyenhoangtho.github.io/bai-viet/lam-loi-chao-theo-moc-thoi-gian-trong-ngay/</guid>
+      <description>Giới thiệu Trong bài viết Làm Chrome Extension thay đổi wallpaper theo ngày  thì mình có đề cập đến việc làm hệ thống hiện giờ trên extension đơn giản. Nay mình sẽ hướng dẫn cách nâng cấp hệ thống này bằng cách thêm hiện lời chào kèm theo âm thanh dựa vào thời điểm trong ngày ( dựa trên giờ được set trong máy tính) . Rất may mắn là Javascript đã có sẵn các phương thức để xử lí vấn đề thời gian.</description>
+    </item>
+    
+    <item>
+      <title>Tự viết Chrome Extension thay đổi wallpaper theo từng ngày</title>
+      <link>http://buinguyenhoangtho.github.io/bai-viet/bing-wallpaper-clone/</link>
+      <pubDate>Thu, 28 Jan 2021 18:29:41 +0700</pubDate>
+      
+      <guid>http://buinguyenhoangtho.github.io/bai-viet/bing-wallpaper-clone/</guid>
+      <description>Giới thiệu Xin chào các bạn , trong lúc đang ngồi học thêm về Javascript thì may mắn thế nào lại tìm được file JSON của hệ thống thay đổi hình nền theo ngày của Bing (hay gọi là bing Daily Wallpaper). Thế là mình ngồi viết ra extension dựa vào nó. Toàn bộ Extesnion của mình hoàn toàn viết bằng Bootstrap,CSS và Ajax
+Cấu trúc extension  manifest.json : Khai báo thông tin extension, như tên extension, miêu tả v.</description>
+    </item>
+    
+    <item>
+      <title>Tạo thông báo cho web bằng Toasty</title>
+      <link>http://buinguyenhoangtho.github.io/bai-viet/tao-thong-bao-cho-web-bang-toasty/</link>
+      <pubDate>Wed, 27 Jan 2021 18:29:41 +0700</pubDate>
+      
+      <guid>http://buinguyenhoangtho.github.io/bai-viet/tao-thong-bao-cho-web-bang-toasty/</guid>
+      <description>Giới thiệu Chào các bạn, mỗi khi làm trang web thì ắt hẳn nhiều người lập trình thường hay viết vài câu thông báo cho người dùng biết kết quả các tiến trình họ đang làm. Ví dụ như đăng nhập, đăng kí, hay gửi thư&amp;hellip; Đành rằng trong Javascript đã sẵn hàm alert() để đảm nhận việc đó rồi. Nhưng không, nhiệm vụ của một người lập trình Web là phải đem lại trải nhiệm người dùng tốt nhất có thể, với lại không một ai rảnh tay cứ bấm vào nút &amp;ldquo;OK&amp;rdquo; liên tục cả.</description>
+    </item>
+    
+  </channel>
+</rss>

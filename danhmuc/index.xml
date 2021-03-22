@@ -5,6 +5,43 @@
     <link>http://buinguyenhoangtho.github.io/danhmuc/</link>
     <description>Recent content in Danhmuc on Blog của tôi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>VN-vi</language><atom:link href="http://buinguyenhoangtho.github.io/danhmuc/index.xml" rel="self" type="application/rss+xml" />
+    <language>VN-vi</language>
+    <lastBuildDate>Tue, 09 Mar 2021 09:34:22 +0000</lastBuildDate><atom:link href="http://buinguyenhoangtho.github.io/danhmuc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WINDOWS</title>
+      <link>http://buinguyenhoangtho.github.io/danhmuc/windows/</link>
+      <pubDate>Tue, 09 Mar 2021 09:34:22 +0000</pubDate>
+      
+      <guid>http://buinguyenhoangtho.github.io/danhmuc/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JAVASCRIPT</title>
+      <link>http://buinguyenhoangtho.github.io/danhmuc/javascript/</link>
+      <pubDate>Wed, 17 Feb 2021 06:19:23 +0000</pubDate>
+      
+      <guid>http://buinguyenhoangtho.github.io/danhmuc/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DỰ ÁN</title>
+      <link>http://buinguyenhoangtho.github.io/danhmuc/d%E1%BB%B1-%C3%A1n/</link>
+      <pubDate>Thu, 28 Jan 2021 18:29:41 +0700</pubDate>
+      
+      <guid>http://buinguyenhoangtho.github.io/danhmuc/d%E1%BB%B1-%C3%A1n/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>http://buinguyenhoangtho.github.io/danhmuc/html/</link>
+      <pubDate>Thu, 28 Jan 2021 18:29:41 +0700</pubDate>
+      
+      <guid>http://buinguyenhoangtho.github.io/danhmuc/html/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
