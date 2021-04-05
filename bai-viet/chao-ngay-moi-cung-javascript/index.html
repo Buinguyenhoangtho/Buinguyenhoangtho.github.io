@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="VN-vi"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/sunburst.css.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    
+    
+    
+<title>[Javascript] Xuất thông tin ngày và giờ trong Javascript | Blog của tôi</title>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head><body><div class="container">
+    <div class="row">
+            
+            <nav class="navbar navbar-light navbar-expand-lg  w-100">
+                <a class="navbar-brand" href="/" style="">Hoàng Thọ</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav">
+                        
+                        
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/the"> 🏷️ Thẻ</a>
+                          </li>
+                          
+                        
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ve-toi"> 😀Về tôi</a>
+                          </li>
+                          
+                        
+                        
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/buinguyenhoangtho?tab=repositories">
+                                Github
+                            </a> 
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://www.linkedin.com/in/b%C3%B9i-nguy%E1%BB%85n-ho%C3%A0ng-th%E1%BB%8D-2b136a1b0/">
+                             Linkedin
+                            </a>
+                          </li>
+                    </ul>
+                </div>
+            </nav>
+
+    </div>
+</div><main>
+
+
+<div class="container">
+
+<hr>
+    <div class="justify-content-around row">
+        <div class="col-md-8 single-wrapper">
+            
+            <p> <a href="/">&#8592; Quay về trang chủ</a></p>
+            <div class="text-center post-wrapper--tags">
+                
+                <a href="/the/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn">#Hướng dẫn</a>
+                
+            </div>
+            <h4 class="single-wrapper--title">[Javascript] Xuất thông tin ngày và giờ trong Javascript</h4>
+            
+            <div class="text-center single-wrapper-detail">
+                
+                <span class="date">📅
+                    10
+                    tháng hai,2021
+                    
+                    | 925 từ
+                </span> 
+
+                    
+            </div>
+            <p class="single-wrapper--content"><p><strong>Cập nhật ngày 06/04/2021:</strong>: Bổ sung, sửa lỗi chính tả, câu văn..</p>
+<h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Như các bạn cũng biết, tất cả các ngôn ngữ lập trình từ C++, C, Python v..v đều có các hàm, thư viện hỗ trợ trong việc xử lí thời gian, và Javascript cũng không ngoại lệ.
+Hôm nay mình sẽ giới thiệu các bạn sơ qua về cách sử dụng hàm hay phương thức xử lí thời gian cơ bản trong Javascript thông qua một ví dụ nhỏ. Đó là<br>
+
+<a class = "url-text"href="https://www.w3schools.com/js/js_date_methods.asp" target="_blank" rel="noopener">Các bạn tham khảo tại đây </a>
+<i class="fa fa-link" aria-hidden="true"></i></p>
+<!-- raw HTML omitted -->
+<h2 id="ý-tưởng">Ý tưởng</h2>
+<blockquote>
+<ul>
+<li>Hệ thống sẽ xác định thời gian trên máy tính của bạn</li>
+<li>Nếu thời gian chạy trùng với một trong các điều kiện thì hệ thống sẽ phát ra lời chào</li>
+</ul>
+</blockquote>
+<h3 id="thực-hiện">Thực hiện</h3>
+<p>Các bạn có thể thấy đoạn code ở dưới nó hoạt động như thế nào thông qua từng ví dụ nhỏ</p>
+<p>Demo nhỏ này mình sẽ chia ra thành 4 file riêng biệt như trong hình.</p>
+<p><img src="https://i.imgur.com/8HTGkNp.png" alt="1">
+Trong đó:</p>
+<pre><code>date.js: Liên quan đến ngày tháng 
+time.js: Liên quan đến thời gian
+greeting.js: Hiện lời chào theo điều kiện
+index.html: Show kết quả
+
+</code></pre><p>Ok chúng ta sẽ đi từng bước nhé: 👌</p>
+<h3 id="xử-lí-thời-gian">Xử lí thời gian</h3>
+<p><strong>time.js</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">time</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(); 
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">getSeconds</span>(); 
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">getMinutes</span>();  
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">getHours</span>(); 
+    <span style="color:#a6e22e">span</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> 
+      (<span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">h</span>).<span style="color:#a6e22e">substr</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> (<span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">m</span>).<span style="color:#a6e22e">substr</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> (<span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s</span>).<span style="color:#a6e22e">substr</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>);
+      <span style="color:#75715e">// Output: 00:00:00
+</span><span style="color:#75715e"></span>  }
+  <span style="color:#a6e22e">setInterval</span>(<span style="color:#a6e22e">time</span>, <span style="color:#ae81ff">1000</span>); 
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">span</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;time&#39;</span>);
+</code></pre></div><p>Đầu tiên, mình đã khai báo đối tượng datetime thông qua <code>new Date()</code>. Đối tượng này cho phép người dùng lấy thời gian hiện tại dựa vào <strong>timezone</strong> của trình duyệt.
+Tiếp theo là lấy ra giờ, phút giây bằng hàm <code>getHours(),getMinutes(),getSeconds()</code> để lấy đầy đủ <strong>giờ,phút,giây</strong></p>
+<p>Bước cuối cùng là sử dụng <code>setInterval</code> để cập nhật giờ phút giây với độ trễ là 1s (1000 milliseconds =
+1 second). Nói sơ qua thì hàm <code>setInterval</code> sẽ giúp người dùng có thể thiết lập độ trể cho hàm được khai báo</p>
+<p><code>substr</code> : sẽ trích xuất nội dung của một chuỗi, nội dung trích xuất sẽ được xác định bằng hai tham số start và end.</p>
+<h3 id="hiện-lời-chào">Hiện lời chào</h3>
+<p>Sau khi hiện thời gian, bước cuối cùng là xác định các mốc và thời gian trong ngày viết điều kiện. Mình sẽ chia thành 6 giai đoạn cụ thể</p>
+<p><strong>greeting.js</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"> {
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">greeting</span>;
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">time</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">getHours</span>();
+        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">time</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">time</span><span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>)
+        {
+          <span style="color:#a6e22e">greeting</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Dậy sớm thế?&#34;</span>;
+          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Dậy sớm thế?&#34;</span>);
+        }
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">time</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">6</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">time</span> <span style="color:#f92672">&lt;</span><span style="color:#ae81ff">10</span>) {
+          <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Chào buổi sáng,&#34;</span>;
+          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Sáng&#34;</span>);
+        }
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">time</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">11</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">time</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">12</span>)
+        {
+          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Trưa&#34;</span>);
+          <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Chào buổi trưa&#34;</span>; 
+        }
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">time</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">time</span><span style="color:#f92672">&lt;</span><span style="color:#ae81ff">18</span>){
+          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Chiều&#34;</span>);
+          <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Chào buổi chiều&#34;</span>;
+        } 
+         <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">time</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">time</span> <span style="color:#f92672">&lt;</span><span style="color:#ae81ff">22</span>){
+          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Tối&#34;</span>);
+          <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Buổi tối tốt lành,&#34;</span>;
+        }
+        <span style="color:#66d9ef">else</span>{
+          <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Chúc ngủ ngon,&#34;</span>;
+          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Khuya&#34;</span>);
+        }
+        document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;greet&#34;</span>).<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">greeting</span>
+      }
+
+</code></pre></div><!-- raw HTML omitted -->
+<p><strong>date.js</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// hàm xử lí ngày tháng năm
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">show_date</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;day&#39;</span>);
+
+  <span style="color:#75715e">// tháng
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// hàm xử lí ngày tháng năm
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">show_date</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;day&#39;</span>);
+
+<span style="color:#75715e">// tháng
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">name_of_month</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;tháng một&#34;</span>, <span style="color:#e6db74">&#34;tháng hai&#34;</span>, <span style="color:#e6db74">&#34;tháng ba&#34;</span>, <span style="color:#e6db74">&#34;tháng tư&#34;</span>, <span style="color:#e6db74">&#34;tháng năm&#34;</span>, <span style="color:#e6db74">&#34;tháng sáu&#34;</span>, <span style="color:#e6db74">&#34;tháng bảy&#34;</span>, <span style="color:#e6db74">&#34;tháng tám&#34;</span>, <span style="color:#e6db74">&#34;tháng chín&#34;</span>, <span style="color:#e6db74">&#34;tháng mười&#34;</span>, <span style="color:#e6db74">&#34;tháng mười một&#34;</span>, <span style="color:#e6db74">&#34;tháng mười hai &#34;</span>
+    ];
+    <span style="color:#75715e">// thứ
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">day_of_week</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Chủ nhật&#39;</span>, <span style="color:#e6db74">&#39;Thứ hai&#39;</span>, <span style="color:#e6db74">&#39;Thứ ba&#39;</span>, <span style="color:#e6db74">&#39;Thứ tư&#39;</span>, <span style="color:#e6db74">&#39;Thứ năm&#39;</span>, <span style="color:#e6db74">&#39;Thứ sáu&#39;</span>, <span style="color:#e6db74">&#39;Thứ bảy&#39;</span>];
+
+  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkTime</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">date</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date();
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">day</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getDate</span>();
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">month</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name_of_month</span>[<span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getMonth</span>()];
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">weekday</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">day_of_week</span>[<span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getDay</span>()];
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">year</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getFullYear</span>();
+    <span style="color:#a6e22e">show_date</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span>  <span style="color:#a6e22e">weekday</span><span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">day</span> <span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span><span style="color:#a6e22e">month</span><span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;  &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">year</span>;
+  }
+  <span style="color:#a6e22e">setInterval</span>(<span style="color:#a6e22e">checkTime</span>(), <span style="color:#ae81ff">1000</span>);
+ 
+
+</code></pre></div><p><strong>date.js</strong> là nơi mà chúng ta sẽ xử lí những vấn đề liên quan đến ngày tháng năm. Cách khai báo cũng tương tự như <strong>time.js</strong>.
+Tuy nhiên có một chút sự khác biệt, nếu như trong <strong>time.js</strong> thì lấy giờ phút giây thì ở <strong>date.js</strong>, chúng ta sẽ đi lấy ngày tháng năm hiện tại.
+Lưu ý 2 : mặc định thì khi xử lí ngày tháng năm, javascript chỉ trả kết quả về dạng số. Chúng ta có đổi kiểu trả về thành tên các ngày trong tuần bằng cách làm như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Khai báo array chứa tên các ngày trong tuần 
+</span><span style="color:#75715e">// weekday = thứ = var thu
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">day_of_week</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Chủ nhật&#39;</span>, <span style="color:#e6db74">&#39;Thứ hai&#39;</span>, <span style="color:#e6db74">&#39;Thứ ba&#39;</span>, <span style="color:#e6db74">&#39;Thứ tư&#39;</span>, <span style="color:#e6db74">&#39;Thứ năm&#39;</span>, <span style="color:#e6db74">&#39;Thứ sáu&#39;</span>, <span style="color:#e6db74">&#39;Thứ bảy&#39;</span>];
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">weekday</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">day_of_week</span>[<span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getDay</span>()];
+  
+</code></pre></div><p>Phương thức <code>date.getDay</code> trả về đúng vị trí phần tử trong mảng <code>day_of_week</code>. Từ đó chúng ta có thể get được tên Thứ trong tuần</p>
+<p>Sau khi đã get được những thông tin ngày tháng và giờ thì chúng ta cần phải show thông tin ra trang chủ.</p>
+<p><strong>index.html</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!doctype html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;Chào ngày mới&lt;/<span style="color:#f92672">title</span>&gt;
+    <span style="color:#75715e">&lt;!-- Required meta tags --&gt;</span>
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1, shrink-to-fit=no&#34;</span>&gt;
+        &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;style.css&#34;</span>&gt;
+    <span style="color:#75715e">&lt;!-- Bootstrap CSS --&gt;</span>
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+        
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;day&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;time&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;greet&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+    <span style="color:#75715e">&lt;!-- Optional JavaScript --&gt;</span>
+    <span style="color:#75715e">&lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;</span>
+    &lt;<span style="color:#f92672">script</span>
+  <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://code.jquery.com/jquery-3.5.1.min.js&#34;</span>
+  <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=&#34;</span>
+  <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+    <span style="color:#75715e">&lt;!-- hiện ngày tháng --&gt;</span>
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;script/date.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+    <span style="color:#75715e">&lt;!-- Hiện giờ --&gt;</span>
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;script/time.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+    
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;script/greeting.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;  
+    <span style="color:#75715e">&lt;!-- Hiện lời chào --&gt;</span>
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+
+</code></pre></div><h2 id="kết-thúc">Kết thúc</h2>
+<p>Trước khi kết thúc bài viết , mình thành thật cáo lỗi vì đáng lẽ ra mình sẽ thêm cả phần audio vào trong demo rồi nhưng không rõ vì sao lại bị lỗi nên đành phải cắt phần đấy. Mong các bạn thông cảm cho.</p>
+</p>
+            
+            <hr class="endpost">
+
+            <div class="container">
+                <div class="row justify-content-start ">
+                    <div class="col-md-6 left">
+                        
+                        <p><a href="http://buinguyenhoangtho.github.io/bai-viet/bing-wallpaper-clone/" class="nav-title">Extension thay đổi wallpaper theo từng ngày </a></p>
+            
+                    </div>
+            <div class="col-md-6 right float-right">
+                
+                <p><a href="http://buinguyenhoangtho.github.io/bai-viet/javascript-array-objects/" class="nav-title">Object và Array có gì khác biệt (phần 1) </a></p>
+    
+
+            </div>
+            <hr class="endpost">
+        </div>
+        
+            </div>
+            </div>
+            
+            </div>        
+                    
+            </div>
+                
+        </div>
+        
+    </div>
+</div>
+
+        
+<hr class="my-4">
+<div class="container">
+    <div class="row">
+        <div class="my-sign mx-auto main-footer">
+            <span id="year"></span> Bùi Nguyễn Hoàng Thọ. 
+        </div>
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+                
+                    
+        
+    </div>
+</div></main>
+        
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+
+
+<script>hljs.highlightAll();</script>
+<script src="https://use.fontawesome.com/266465373f.js"></script>
+    </body>
+</html>

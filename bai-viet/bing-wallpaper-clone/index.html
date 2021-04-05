@@ -4,14 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/github.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/sunburst.css.css">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
     
     
     
-<title>Tự viết Chrome Extension thay đổi wallpaper theo từng ngày | Blog của tôi</title>
+<title>Extension thay đổi wallpaper theo từng ngày | Blog của tôi</title>
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
@@ -73,6 +75,8 @@
 
 
 <div class="container">
+
+<hr>
     <div class="justify-content-around row">
         <div class="col-md-8 single-wrapper">
             
@@ -82,7 +86,7 @@
                 <a href="/the/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn">#Hướng dẫn</a>
                 
             </div>
-            <h4 class="single-wrapper--title">Tự viết Chrome Extension thay đổi wallpaper theo từng ngày</h4>
+            <h4 class="single-wrapper--title">Extension thay đổi wallpaper theo từng ngày</h4>
             
             <div class="text-center single-wrapper-detail">
                 
@@ -90,14 +94,14 @@
                     28
                     tháng một,2021
                     
-                    | 689 từ
+                    | 665 từ
                 </span> 
 
                     
             </div>
-            <p class="single-wrapper--content"><h2 id="giới-thiệu">Giới thiệu</h2>
-<p>Xin chào các bạn , trong lúc đang ngồi học thêm về Javascript thì may mắn thế nào lại tìm được file JSON của hệ thống thay đổi hình nền theo ngày của Bing (hay gọi là bing Daily Wallpaper). Thế là mình ngồi viết ra extension dựa vào nó. Toàn bộ Extesnion của mình hoàn toàn viết bằng Bootstrap,CSS và Ajax</p>
-<!-- raw HTML omitted -->
+            <p class="single-wrapper--content"><p><strong>Cập nhật ngày 06/04/2021:</strong>: Bổ sung, sửa lỗi chính tả, câu văn..</p>
+<h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Xin chào các bạn , trong lúc đang ngồi học thêm về Javascript thì may mắn thế nào lại tìm được file JSON của hệ thống thay đổi hình nền theo ngày của Bing (hay gọi là bing Daily Wallpaper). Thế là mình ngồi viết ra  dựa vào nó. Toàn bộ Extesnion của mình hoàn toàn viết bằng Bootstrap,CSS và Jquery</p>
 <h2 id="cấu-trúc-extension">Cấu trúc extension</h2>
 <!-- raw HTML omitted -->
 <p><img src="https://imgur.com/5ckr7tx.jpg" alt="cấu trúc"></p>
@@ -106,120 +110,114 @@
 <strong>chrome_url_overrides&quot;: { &ldquo;newtab&rdquo;: &ldquo;newtab.html&rdquo;},</strong> ở đây <strong>newtab.html</strong> chính là file HTML sẽ hiện lên khi bạn bật new tab</li>
 </ul>
 <p><strong>manifest.json</strong></p>
-<pre><code>{
-    &quot;name&quot;: &quot;Clone Bing Wallpaper&quot;,
-    &quot;description&quot;: &quot;Tôi viết app này dành cho mục đích cá nhân&quot;,
-    &quot;version&quot;: &quot;1.0&quot;,
-    &quot;incognito&quot;: &quot;split&quot;,
-    &quot;author&quot;:&quot;Bùi Nguyễn Hoàng Thọ&quot;,
-    &quot;chrome_url_overrides&quot;: { &quot;newtab&quot;: &quot;newtab.html&quot; }, 
-    &quot;manifest_version&quot;: 2,
-    &quot;permissions&quot;: [
-        &quot;*://*.bing.com/*&quot;,
-        &quot;http://*/*&quot;,
-        &quot;https://*/*&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Clone Bing Wallpaper&#34;</span>,
+    <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Tôi viết app này dành cho mục đích cá nhân&#34;</span>,
+    <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0&#34;</span>,
+    <span style="color:#f92672">&#34;incognito&#34;</span>: <span style="color:#e6db74">&#34;split&#34;</span>,
+    <span style="color:#f92672">&#34;author&#34;</span>:<span style="color:#e6db74">&#34;Bùi Nguyễn Hoàng Thọ&#34;</span>,
+    <span style="color:#f92672">&#34;chrome_url_overrides&#34;</span>: { <span style="color:#f92672">&#34;newtab&#34;</span>: <span style="color:#e6db74">&#34;newtab.html&#34;</span> }, 
+    <span style="color:#f92672">&#34;manifest_version&#34;</span>: <span style="color:#ae81ff">2</span>,
+    <span style="color:#f92672">&#34;permissions&#34;</span>: [
+        <span style="color:#e6db74">&#34;*://*.bing.com/*&#34;</span>,
+        <span style="color:#e6db74">&#34;http://*/*&#34;</span>,
+        <span style="color:#e6db74">&#34;https://*/*&#34;</span>
     ],
-    &quot;background&quot;: {
-        &quot;scripts&quot;: [
-            &quot;background.js&quot;
+    <span style="color:#f92672">&#34;background&#34;</span>: {
+        <span style="color:#f92672">&#34;scripts&#34;</span>: [
+            <span style="color:#e6db74">&#34;background.js&#34;</span>
         ]
     },
-    &quot;content_security_policy&quot;: &quot;script-src 'self' 'unsafe-eval'; object-src 'self'&quot;
+    <span style="color:#f92672">&#34;content_security_policy&#34;</span>: <span style="color:#e6db74">&#34;script-src &#39;self&#39; &#39;unsafe-eval&#39;; object-src &#39;self&#39;&#34;</span>
 
   }
-</code></pre><ul>
+</code></pre></div><ul>
 <li><strong>Thư mục js</strong> : Nơi chứa các thư viện Javascript như <strong>Bootstrap, popup.js</strong></li>
 <li><strong>style.css</strong> : Nơi chỉnh sửa CSS của Extension</li>
 </ul>
 <h2 id="1--gọi-json">1- Gọi JSON</h2>
 <p>Extension được hoạt động dựa trên JSON nên tất nhiên là phải gọi nó ra chớ :heart:
 Trong thự mục js , tạo file popup.js và paste</p>
-<pre><code>$.ajax({ 
-   type: 'GET', 
-   url: 'https://www.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1&amp;mkt=en-US', 
-   crossDomain: true,
-   dataType: 'json', 
-   success: function (data) { 
-       var title = data.images[0].title;
-       console.log(title);
-      //  ảnh url
-       var url = data.images[0].url;
-      //  url ảnh bing
-       var img_url = &quot;https://bing.com&quot;+ url;
-      //  console.log(finish_url);
-      //  thêm url vào ảnh 
-      $('#wallpaper').html(`&lt;img src='${img_url}'&gt;`);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">$</span>.<span style="color:#a6e22e">ajax</span>({ 
+   <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;GET&#39;</span>, 
+   <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;https://www.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1&amp;mkt=en-US&#39;</span>, 
+   <span style="color:#a6e22e">crossDomain</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+   <span style="color:#a6e22e">dataType</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;json&#39;</span>, 
+   <span style="color:#a6e22e">success</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">data</span>) { 
+       <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">images</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">title</span>;
+       <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">title</span>);
+      <span style="color:#75715e">//  ảnh url
+</span><span style="color:#75715e"></span>       <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">images</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">url</span>;
+      <span style="color:#75715e">//  url ảnh bing
+</span><span style="color:#75715e"></span>       <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">img_url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://bing.com&#34;</span><span style="color:#f92672">+</span> <span style="color:#a6e22e">url</span>;
+      <span style="color:#75715e">//  console.log(finish_url);
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">//  thêm url vào ảnh 
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;#wallpaper&#39;</span>).<span style="color:#a6e22e">html</span>(<span style="color:#e6db74">`&lt;img src=&#39;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">img_url</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;&gt;`</span>);
 
    },
-   error:function(error){
-      console.log(error);
+   <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span><span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">error</span>){
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">error</span>);
    }
 });
-</code></pre><p>Trong đó :</p>
-<blockquote>
-<ul>
-<li><strong>var url</strong>: Khai báo URL của json</li>
-<li><strong>dataType</strong> : kiểu dữ liệu</li>
-</ul>
-</blockquote>
-<p>Nếu thành công, web-browser sẽ gọi lên Ajax và truyền giá trị vào biến url, sau đó sẽ render lên trang <strong>newtab,html</strong> thông qua hàm .html của Jquery</p>
-<p>Khi thành công
-<img src="https://i.imgur.com/bkK2uPE.png" alt="console-log"></p>
+</code></pre></div><p>Trong đó :</p>
+<p><strong>var url</strong>: Khai báo URL của json</p>
+<p><strong>dataType</strong> : kiểu dữ liệu</p>
+<p><img src="https://i.imgur.com/bkK2uPE.png" alt="console-log"></p>
 <h2 id="2--thêm-các-chi-tiết-phụ">2- Thêm các chi tiết phụ</h2>
 <p>Vậy là phần chính của extension đã xong. Đến lúc thêm thắt một chút chi tiết phụ để trang trí extension. Mục tiêu của mình chỉ là hiện search box, ngày tháng năm trên máy tính.</p>
 <h3 id="thêm-search-box-google">Thêm search box google</h3>
-<p>Ở đây là mình viết bằng các class Bootstrap. Nếu bạn nào chưa biết nhiều về Bootstrap thì hãy nhấn vào
-<a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" target="_blank" rel="noopener">đây</a>
-<i class="fa fa-link" aria-hidden="true"></i> để tìm hiểu</p>
-<pre><code>&lt;form action=&quot;https://www.google.com/search&quot; class=&quot;searchform&quot; method=&quot;get&quot; name=&quot;searchform&quot; target=&quot;_blank&quot;&gt;
-              &lt;div class=&quot;col-md-6 offset-md-3 input-group mb-3 &quot;&gt;
-                &lt;input type=&quot;text&quot;  class=&quot;form-control search-box&quot; placeholder=&quot;Tìm kiếm&quot; aria-label=&quot;tìm kiếm&quot; aria-describedby=&quot;basic-addon2&quot; name=&quot;q&quot;&gt;
-                &lt;div class=&quot;input-group-append&quot;&gt;
-                  &lt;div class=&quot;input-group-text&quot; id=&quot;basic-addon2&quot;&gt;
-                  &lt;i class=&quot;fa fa-google&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;    
-                  &lt;/div&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-              &lt;/form&gt;
-</code></pre><p><img src="https://i.imgur.com/h2OT9nD.jpg" alt="step-3"></p>
+<p>Ở đây là mình viết bằng các class Bootstrap. Các bạn muốn tìm hiểu thêm về Bootstrap thì nhấp vào 
+<a class = "url-text"href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" target="_blank" rel="noopener">đây</a>
+<i class="fa fa-link" aria-hidden="true"></i></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.google.com/search&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;searchform&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;get&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;searchform&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;
+              &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-md-6 offset-md-3 input-group mb-3 &#34;</span>&gt;
+                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span>  <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control search-box&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Tìm kiếm&#34;</span> <span style="color:#a6e22e">aria-label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tìm kiếm&#34;</span> <span style="color:#a6e22e">aria-describedby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;basic-addon2&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;q&#34;</span>&gt;
+                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;input-group-append&#34;</span>&gt;
+                  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;input-group-text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;basic-addon2&#34;</span>&gt;
+                  &lt;<span style="color:#f92672">i</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fa fa-google&#34;</span> <span style="color:#a6e22e">aria-hidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;&lt;/<span style="color:#f92672">i</span>&gt;    
+                  &lt;/<span style="color:#f92672">div</span>&gt;
+                &lt;/<span style="color:#f92672">div</span>&gt;
+              &lt;/<span style="color:#f92672">div</span>&gt;
+              &lt;/<span style="color:#f92672">form</span>&gt;
+</code></pre></div><p><img src="https://i.imgur.com/h2OT9nD.jpg" alt="step-3"></p>
 <h3 id="thêm-đồng-hồ">Thêm đồng hồ</h3>
 <p>Tiếp tục tạo ra <strong>date.js</strong> và <strong>time,js</strong> trong thư mục <strong>js</strong></p>
-<pre><code>// time.js : Hiện hệ thống thời gian. 
-// Phương thức getElementById trả về phần tử có thuộc tính ID là giá trị được chỉ định.
-var span = document.getElementById('time');
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// time.js : Hiện hệ thống thời gian. 
+</span><span style="color:#75715e">// Phương thức getElementById trả về phần tử có thuộc tính ID là giá trị được chỉ định.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">span</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;time&#39;</span>);
 
-function time() {
-  var d = new Date(); //khai báo thư viện xử lí thời gian 
-  var s = d.getSeconds(); // lấy ra số giây
-  var m = d.getMinutes(); // lấy ra số phút 
-  var h = d.getHours(); // lấy ra số giờ
-  span.textContent = 
-    (&quot;0&quot; + h).substr(-2) + &quot;:&quot; + (&quot;0&quot; + m).substr(-2) + &quot;:&quot; + (&quot;0&quot; + s).substr(-2);
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">time</span>() {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(); <span style="color:#75715e">//khai báo thư viện xử lí thời gian 
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">getSeconds</span>(); <span style="color:#75715e">// lấy ra số giây
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">getMinutes</span>(); <span style="color:#75715e">// lấy ra số phút 
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">getHours</span>(); <span style="color:#75715e">// lấy ra số giờ
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">span</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> 
+    (<span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">h</span>).<span style="color:#a6e22e">substr</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> (<span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">m</span>).<span style="color:#a6e22e">substr</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> (<span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s</span>).<span style="color:#a6e22e">substr</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>);
 }
 
-setInterval(time, 1000);
-//setInterval là hàm thiết lập độ trễ cho các hàm được thực hiện lặp đi lặp lại
-</code></pre><h3 id="thêm-ngày-tháng">Thêm ngày tháng</h3>
+<span style="color:#a6e22e">setInterval</span>(<span style="color:#a6e22e">time</span>, <span style="color:#ae81ff">1000</span>);
+<span style="color:#75715e">//setInterval là hàm thiết lập độ trễ cho các hàm được thực hiện lặp đi lặp lại
+</span></code></pre></div><h3 id="thêm-ngày-tháng">Thêm ngày tháng</h3>
 <p>Tương tự hàm hiện thời gian, cũng khai báo hàm để hiện ngày tháng năm. Tại <strong>js/time.js</strong></p>
-<pre><code>
-// hàm xử lí ngày tháng năm
-
-// tháng
-var thang = [&quot;tháng một&quot;, &quot;tháng hai&quot;, &quot;tháng ba&quot;, &quot;tháng tư&quot;, &quot;tháng năm&quot;, &quot;tháng sáu&quot;, &quot;tháng bảy&quot;, &quot;tháng tám&quot;, &quot;tháng chín&quot;, &quot;tháng mười&quot;, &quot;tháng mười một&quot;, &quot;tháng mười hai &quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+<span style="color:#75715e">// hàm xử lí ngày tháng năm
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// tháng
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">thang</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;tháng một&#34;</span>, <span style="color:#e6db74">&#34;tháng hai&#34;</span>, <span style="color:#e6db74">&#34;tháng ba&#34;</span>, <span style="color:#e6db74">&#34;tháng tư&#34;</span>, <span style="color:#e6db74">&#34;tháng năm&#34;</span>, <span style="color:#e6db74">&#34;tháng sáu&#34;</span>, <span style="color:#e6db74">&#34;tháng bảy&#34;</span>, <span style="color:#e6db74">&#34;tháng tám&#34;</span>, <span style="color:#e6db74">&#34;tháng chín&#34;</span>, <span style="color:#e6db74">&#34;tháng mười&#34;</span>, <span style="color:#e6db74">&#34;tháng mười một&#34;</span>, <span style="color:#e6db74">&#34;tháng mười hai &#34;</span>
 ];
-// thứ
-var thu = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
+<span style="color:#75715e">// thứ
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">thu</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Chủ nhật&#39;</span>, <span style="color:#e6db74">&#39;Thứ hai&#39;</span>, <span style="color:#e6db74">&#39;Thứ ba&#39;</span>, <span style="color:#e6db74">&#39;Thứ tư&#39;</span>, <span style="color:#e6db74">&#39;Thứ năm&#39;</span>, <span style="color:#e6db74">&#39;Thứ sáu&#39;</span>, <span style="color:#e6db74">&#39;Thứ bảy&#39;</span>];
 
-function checkTime() {
-    var date = new Date();
-var day = date.getDate();
-  var month = thang[date.getMonth()];
-  var weekday = thu[date.getDay()];
-  var year = date.getFullYear();
-  document.getElementById('day').innerHTML =  weekday+ &quot; &quot; + day +&quot; &quot; +month+ &quot;  &quot; + year;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkTime</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">date</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date();
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">day</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getDate</span>();
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">month</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">thang</span>[<span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getMonth</span>()];
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">weekday</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">thu</span>[<span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getDay</span>()];
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">year</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">getFullYear</span>();
+  document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;day&#39;</span>).<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span>  <span style="color:#a6e22e">weekday</span><span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">day</span> <span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span><span style="color:#a6e22e">month</span><span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;  &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">year</span>;
 }
-setInterval(checkTime(), 1000);
-</code></pre><p>Kết quả :
+<span style="color:#a6e22e">setInterval</span>(<span style="color:#a6e22e">checkTime</span>(), <span style="color:#ae81ff">1000</span>);
+</code></pre></div><p>Kết quả :
 <img src="https://i.imgur.com/cxF4EOx.jpg" alt="final"></p>
 <h2 id="lời-kết">Lời kết</h2>
 <p>Vậy là xong, chỉ với một chút Bootstrap và Jquery/Ajax là bạn đã có thể tự tạo cho mình một extension tự động thay đổi theo ngày. Chúc các bạn thành công 💑💑</p>
@@ -236,7 +234,7 @@ setInterval(checkTime(), 1000);
                     </div>
             <div class="col-md-6 right float-right">
                 
-                <p><a href="http://buinguyenhoangtho.github.io/bai-viet/lam-loi-chao-theo-moc-thoi-gian-trong-ngay/" class="nav-title">Làm lời chào theo mốc thời gian trong ngày </a></p>
+                <p><a href="http://buinguyenhoangtho.github.io/bai-viet/chao-ngay-moi-cung-javascript/" class="nav-title">[Javascript] Xuất thông tin ngày và giờ trong Javascript </a></p>
     
 
             </div>

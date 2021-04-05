@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/github.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/sunburst.css.css">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
     
     
     
@@ -73,6 +75,8 @@
 
 
 <div class="container">
+
+<hr>
     <div class="justify-content-around row">
         <div class="col-md-8 single-wrapper">
             
@@ -92,12 +96,13 @@
                     09
                     tháng ba,2021
                     
-                    | 418 từ
+                    | 400 từ
                 </span> 
 
                     
             </div>
-            <p class="single-wrapper--content"><h2 id="lời-nói-đầu">Lời nói đầu</h2>
+            <p class="single-wrapper--content"><p><strong>Cập nhật ngày 06/04/2021:</strong>: Bổ sung, sửa lỗi chính tả, câu văn..</p>
+<h2 id="lời-nói-đầu">Lời nói đầu</h2>
 <p>Chào các bác, hôm nay tôi sẽ viết một bài ngắn gọn về cách tôi đã hô biến giao diện cmder mặc định sang Ubuntu (giống đến 95%) như thế nào nhé 😁 😁 !</p>
 <p>À trước khi bắt đầu, mình sẽ nêu ngắn gọn những lí do chính vì sao tôi lại chọn sử dụng Cmder.</p>
 <ul>
@@ -136,18 +141,19 @@
 14: #fce94f
 15: #eeeeec
 </code></pre><h3 id="thay-đổi-font">Thay đổi font</h3>
-<p>Mặc định cmder sử dụng font <strong>Consolas</strong>, để thay đổi các bạn vào mục Fonts, chọn font bạn thích và lưu lại là xong. Ở đây, mình chọn font <a href="https://www.jetbrains.com/lp/mono/" target="_blank" rel="noopener">Jetbrains Mono</a>
+<p>Mặc định cmder sử dụng font <strong>Consolas</strong>, để thay đổi các bạn vào mục Fonts, chọn font bạn thích và lưu lại là xong. Ở đây, mình chọn font 
+<a class = "url-text"href="https://www.jetbrains.com/lp/mono/" target="_blank" rel="noopener">Jetbrains Mono</a>
 <i class="fa fa-link" aria-hidden="true"></i> để sử dụng. Bạn có thể tải bất cứ font gì mà bạn muốn</p>
 <p><img src="https://i.imgur.com/YNXTYSv.png" alt="Tab font"></p>
 <!-- raw HTML omitted -->
 <p><img src="https://i.imgur.com/SkKTk93.png" alt="Kết quả:"></p>
 <h2 id="bonus-tips">Bonus tips</h2>
-<p>Đôi khi font mà bạn muốn sử dụng bị lỗi <strong>λ</strong> (sẽ hiện ra ô vuông ) vì theo mình biết một số font sẽ không hỗ trợ hiển thị kí hiệu đó. Nếu như bạn vẫn muốn &ldquo;cố đấm ăn xôi&rdquo; thì có thể thay đổi &ldquo;em nó&rdquo; bằng cách mở file <strong>/cmder/vendor/clink.lua</strong> bằng text editor thường dùng của các bác,
-tìm dòng <code>local lambda = &quot;λ&quot;</code> và thay bằng kí hiệu khác. Ví dụ từ <strong>λ</strong> thành <strong>-&gt;</strong> thì điều chỉnh thành : <code>local lambda = &quot;-&gt;&quot;</code> là xong !</p>
+<p>Đôi khi font mà bạn muốn sử dụng bị lỗi <strong>λ</strong> (sẽ hiện ra ô vuông ) vì theo mình biết một số font sẽ không hỗ trợ hiển thị kí hiệu đó. Nếu như bạn vẫn muốn &ldquo;cố đấm ăn xôi&rdquo; thì có thể thay đổi &ldquo;em nó&rdquo; bằng cách mở file <strong>/cmder/vendor/clink.lua</strong> ,tìm đến dòng <code>local lambda = &quot;λ&quot;</code> và thay bằng kí hiệu khác.</p>
 <p><img src="https://i.imgur.com/23g2S9F.png" alt="Thay đổi kí hiệu thành công"></p>
 <h2 id="lời-kết">Lời kết</h2>
-<p>Vậy là xong, đơn giản, dễ hiểu. Chúc các bạn thành công ✋✋!</p>
-<p>Tham khảo câu hỏi: <a href="https://superuser.com/questions/497240/ubuntu-purple-terminal-colors-in-conemu" target="_blank" rel="noopener">Ubuntu purple terminal colors in ConEmu</a>
+<p>Chúc các bạn thành công ✋✋!</p>
+<p>Tham khảo dựa trên câu hỏi: 
+<a class = "url-text"href="https://superuser.com/questions/497240/ubuntu-purple-terminal-colors-in-conemu" target="_blank" rel="noopener">Ubuntu purple terminal colors in ConEmu</a>
 <i class="fa fa-link" aria-hidden="true"></i></p>
 </p>
             

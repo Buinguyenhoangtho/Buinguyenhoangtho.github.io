@@ -10,21 +10,14 @@ nav{
     width:150px;
     
 }
-code{
-    max-width:100%;
-    width:100%;
-}
-/* single.html */
-/* bài viết */
-
-pre > code {
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
-}
+/*  */
 .post-wrapper{
     float:left;
     font-family: 'Noto Serif', serif;
     border:transparent !important;
-}
+    width:100%;
+    margin-top:20px;
+}   
 img { 
     
     float:left;
@@ -101,9 +94,8 @@ a{
 }
 .single-wrapper--title{
     text-align: center;
-    height:100px;
-    line-height: 100px;
-    /* padding-bottom: 80px; */
+    max-height:auto;
+    
 }
 .single-wrapper--title a{
     color:black !important;
@@ -192,4 +184,8 @@ a:hover{
 .endpost {
     border-top: 1px dashed #494845 !important;
   }
-  
+/* render-link.html */
+.url-text {
+    color:rgb(255, 102, 0) !important;
+    font-weight: bold;
+}

@@ -8,13 +8,13 @@
     <language>VN-vi</language>
     <lastBuildDate>Thu, 28 Jan 2021 18:29:41 +0700</lastBuildDate><atom:link href="http://buinguyenhoangtho.github.io/danhmuc/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Tự viết Chrome Extension thay đổi wallpaper theo từng ngày</title>
+      <title>Extension thay đổi wallpaper theo từng ngày</title>
       <link>http://buinguyenhoangtho.github.io/bai-viet/bing-wallpaper-clone/</link>
       <pubDate>Thu, 28 Jan 2021 18:29:41 +0700</pubDate>
       
       <guid>http://buinguyenhoangtho.github.io/bai-viet/bing-wallpaper-clone/</guid>
-      <description>Giới thiệu Xin chào các bạn , trong lúc đang ngồi học thêm về Javascript thì may mắn thế nào lại tìm được file JSON của hệ thống thay đổi hình nền theo ngày của Bing (hay gọi là bing Daily Wallpaper). Thế là mình ngồi viết ra extension dựa vào nó. Toàn bộ Extesnion của mình hoàn toàn viết bằng Bootstrap,CSS và Ajax
-Cấu trúc extension  manifest.json : Khai báo thông tin extension, như tên extension, miêu tả v.</description>
+      <description>Cập nhật ngày 06/04/2021:: Bổ sung, sửa lỗi chính tả, câu văn..
+Giới thiệu Xin chào các bạn , trong lúc đang ngồi học thêm về Javascript thì may mắn thế nào lại tìm được file JSON của hệ thống thay đổi hình nền theo ngày của Bing (hay gọi là bing Daily Wallpaper). Thế là mình ngồi viết ra dựa vào nó. Toàn bộ Extesnion của mình hoàn toàn viết bằng Bootstrap,CSS và Jquery</description>
     </item>
     
     <item>
@@ -23,7 +23,12 @@ Cấu trúc extension  manifest.json : Khai báo thông tin extension, như tên
       <pubDate>Wed, 27 Jan 2021 18:29:41 +0700</pubDate>
       
       <guid>http://buinguyenhoangtho.github.io/bai-viet/tao-thong-bao-cho-web-bang-toasty/</guid>
-      <description>Giới thiệu Chào các bạn, mỗi khi làm trang web thì ắt hẳn nhiều người lập trình thường hay viết vài câu thông báo cho người dùng biết kết quả các tiến trình họ đang làm. Ví dụ như đăng nhập, đăng kí, hay gửi thư&amp;hellip; Đành rằng trong Javascript đã sẵn hàm alert() để đảm nhận việc đó rồi. Nhưng không, nhiệm vụ của một người lập trình Web là phải đem lại trải nhiệm người dùng tốt nhất có thể, với lại không một ai rảnh tay cứ bấm vào nút &amp;ldquo;OK&amp;rdquo; liên tục cả.</description>
+      <description>Cập nhật ngày 06/04/2021:
+Bổ sung, sửa lỗi chính tả, câu văn..
+Giới thiệu Nay rảnh rỗi nên mình review thư viện thông báo Javascript mình hay sử dụng khi làm web. Đó là
+Tại sao mình lại chọn thư viện này ?
+ Cài đặt dễ dàng. Đẹp, nhẹ Hỗ trợ âm thanh, phù hợp dành cho những tính năng như hiện thông báo  Tác giả: egalink
+Trang chủ: http://jakim.</description>
     </item>
     
   </channel>

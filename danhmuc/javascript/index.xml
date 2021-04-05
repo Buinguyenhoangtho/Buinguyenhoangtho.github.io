@@ -13,28 +13,27 @@
       <pubDate>Wed, 17 Feb 2021 06:19:23 +0000</pubDate>
       
       <guid>http://buinguyenhoangtho.github.io/bai-viet/javascript-array-objects/</guid>
-      <description>Mở đầu Khi học và làm việc với Javascript, Array và Object có thể lưu trữ nhiều dữ liệu. Vậy Array và Object có gì khác nhau? Mini series sẽ được chia thành hai phần và sẽ cover đầy đủ lại kiến thức cơ bản cần phải nhớ khi làm việc với Array và Object.
-Mảng là gì? 1.1 Định nghĩa cơ bản về mảng :
- Mảng (array) được sắp xếp theo thứ tự chuỗi giá trị.</description>
+      <description>Mở đầu Khi học và làm việc với Javascript, chắc hẳn các bạn sẽ được làm quen với các khái niệm về mảng (Array) và đối tượng (Object). Cả hai đều cho phép chúng ta lưu trữ dữ liệu. Vậy giữa chúng có những gì khác nhau. Mini series sẽ được chia thành hai phần và sẽ tóm gọn lại những phần cơ bản cần phải nhớ khi xử lí chúng.</description>
     </item>
     
     <item>
-      <title>Làm lời chào theo mốc thời gian trong ngày</title>
-      <link>http://buinguyenhoangtho.github.io/bai-viet/lam-loi-chao-theo-moc-thoi-gian-trong-ngay/</link>
-      <pubDate>Wed, 10 Feb 2021 18:29:41 +0700</pubDate>
+      <title>[Javascript] Xuất thông tin ngày và giờ trong Javascript</title>
+      <link>http://buinguyenhoangtho.github.io/bai-viet/chao-ngay-moi-cung-javascript/</link>
+      <pubDate>Wed, 10 Feb 2021 11:29:41 +0000</pubDate>
       
-      <guid>http://buinguyenhoangtho.github.io/bai-viet/lam-loi-chao-theo-moc-thoi-gian-trong-ngay/</guid>
-      <description>Giới thiệu Trong bài viết Làm Chrome Extension thay đổi wallpaper theo ngày  thì mình có đề cập đến việc làm hệ thống hiện giờ trên extension đơn giản. Nay mình sẽ hướng dẫn cách nâng cấp hệ thống này bằng cách thêm hiện lời chào kèm theo âm thanh dựa vào thời điểm trong ngày ( dựa trên giờ được set trong máy tính) . Rất may mắn là Javascript đã có sẵn các phương thức để xử lí vấn đề thời gian.</description>
+      <guid>http://buinguyenhoangtho.github.io/bai-viet/chao-ngay-moi-cung-javascript/</guid>
+      <description>Cập nhật ngày 06/04/2021:: Bổ sung, sửa lỗi chính tả, câu văn..
+Giới thiệu Như các bạn cũng biết, tất cả các ngôn ngữ lập trình từ C++, C, Python v..v đều có các hàm, thư viện hỗ trợ trong việc xử lí thời gian, và Javascript cũng không ngoại lệ. Hôm nay mình sẽ giới thiệu các bạn sơ qua về cách sử dụng hàm hay phương thức xử lí thời gian cơ bản trong Javascript thông qua một ví dụ nhỏ.</description>
     </item>
     
     <item>
-      <title>Tự viết Chrome Extension thay đổi wallpaper theo từng ngày</title>
+      <title>Extension thay đổi wallpaper theo từng ngày</title>
       <link>http://buinguyenhoangtho.github.io/bai-viet/bing-wallpaper-clone/</link>
       <pubDate>Thu, 28 Jan 2021 18:29:41 +0700</pubDate>
       
       <guid>http://buinguyenhoangtho.github.io/bai-viet/bing-wallpaper-clone/</guid>
-      <description>Giới thiệu Xin chào các bạn , trong lúc đang ngồi học thêm về Javascript thì may mắn thế nào lại tìm được file JSON của hệ thống thay đổi hình nền theo ngày của Bing (hay gọi là bing Daily Wallpaper). Thế là mình ngồi viết ra extension dựa vào nó. Toàn bộ Extesnion của mình hoàn toàn viết bằng Bootstrap,CSS và Ajax
-Cấu trúc extension  manifest.json : Khai báo thông tin extension, như tên extension, miêu tả v.</description>
+      <description>Cập nhật ngày 06/04/2021:: Bổ sung, sửa lỗi chính tả, câu văn..
+Giới thiệu Xin chào các bạn , trong lúc đang ngồi học thêm về Javascript thì may mắn thế nào lại tìm được file JSON của hệ thống thay đổi hình nền theo ngày của Bing (hay gọi là bing Daily Wallpaper). Thế là mình ngồi viết ra dựa vào nó. Toàn bộ Extesnion của mình hoàn toàn viết bằng Bootstrap,CSS và Jquery</description>
     </item>
     
     <item>
@@ -43,7 +42,12 @@ Cấu trúc extension  manifest.json : Khai báo thông tin extension, như tên
       <pubDate>Wed, 27 Jan 2021 18:29:41 +0700</pubDate>
       
       <guid>http://buinguyenhoangtho.github.io/bai-viet/tao-thong-bao-cho-web-bang-toasty/</guid>
-      <description>Giới thiệu Chào các bạn, mỗi khi làm trang web thì ắt hẳn nhiều người lập trình thường hay viết vài câu thông báo cho người dùng biết kết quả các tiến trình họ đang làm. Ví dụ như đăng nhập, đăng kí, hay gửi thư&amp;hellip; Đành rằng trong Javascript đã sẵn hàm alert() để đảm nhận việc đó rồi. Nhưng không, nhiệm vụ của một người lập trình Web là phải đem lại trải nhiệm người dùng tốt nhất có thể, với lại không một ai rảnh tay cứ bấm vào nút &amp;ldquo;OK&amp;rdquo; liên tục cả.</description>
+      <description>Cập nhật ngày 06/04/2021:
+Bổ sung, sửa lỗi chính tả, câu văn..
+Giới thiệu Nay rảnh rỗi nên mình review thư viện thông báo Javascript mình hay sử dụng khi làm web. Đó là
+Tại sao mình lại chọn thư viện này ?
+ Cài đặt dễ dàng. Đẹp, nhẹ Hỗ trợ âm thanh, phù hợp dành cho những tính năng như hiện thông báo  Tác giả: egalink
+Trang chủ: http://jakim.</description>
     </item>
     
   </channel>

@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/github.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/sunburst.css.css">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
     
     
     
@@ -73,6 +75,8 @@
 
 
 <div class="container">
+
+<hr>
     <div class="justify-content-around row">
         <div class="col-md-8 single-wrapper">
             
@@ -90,15 +94,23 @@
                     27
                     tháng một,2021
                     
-                    | 1465 từ
+                    | 1414 từ
                 </span> 
 
                     
             </div>
-            <p class="single-wrapper--content"><h2 id="giới-thiệu">Giới thiệu</h2>
-<p>Chào các bạn, mỗi khi làm trang web thì ắt hẳn nhiều người lập trình thường hay viết vài câu thông báo cho người dùng biết kết quả các tiến trình họ đang làm. Ví dụ như đăng nhập, đăng kí, hay gửi thư&hellip; Đành rằng trong Javascript đã sẵn hàm alert() để đảm nhận việc đó rồi. Nhưng không, nhiệm vụ của một người lập trình Web là phải đem lại trải nhiệm người dùng tốt nhất có thể, với lại không một ai rảnh tay cứ bấm vào nút &ldquo;OK&rdquo; liên tục cả. Thành ra, để có thể có thể thu hút người dùng hơn thì hôm nay mình sẽ giới thiệu cho các bạn thư viện tạo thông báo mình mới tìm được hôm nay. Đó là <strong>Toasty.js</strong>
-<img src="https://i.imgur.com/fyExrP2.png" alt="main"></p>
-<p>Người lập trình: egalink</p>
+            <p class="single-wrapper--content"><p><strong>Cập nhật ngày 06/04/2021:</strong></p>
+<p>Bổ sung, sửa lỗi chính tả, câu văn..</p>
+<h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Nay rảnh rỗi nên mình review thư viện thông báo Javascript mình hay sử dụng khi làm web. Đó là</p>
+<p>Tại sao mình lại chọn thư viện này ?</p>
+<ul>
+<li>Cài đặt dễ dàng.</li>
+<li>Đẹp, nhẹ</li>
+<li>Hỗ trợ âm thanh, phù hợp dành cho những tính năng như hiện thông báo</li>
+</ul>
+<p><img src="https://i.imgur.com/fyExrP2.png" alt="main"></p>
+<p>Tác giả: egalink</p>
 <p>Trang chủ: <a href="http://jakim.me/Toasty.js/">http://jakim.me/Toasty.js/</a></p>
 <h2 id="cài-đặt-vào-sử-dụng">Cài đặt vào sử dụng</h2>
 <h3 id="cài-đặt">Cài đặt</h3>
@@ -106,79 +118,78 @@
 <blockquote>
 <p><code>npm i egalink-toasty.js</code></p>
 </blockquote>
-<p>Hoặc tải trực tiếp <a href="!https://codeload.github.com/egalink/Toasty.js/zip/master">tại đây</a>
+<p>Hoặc tải trực tiếp 
+<a class = "url-text"href="!https://codeload.github.com/egalink/Toasty.js/zip/master">tại đây</a>
 <i class="fa fa-link" aria-hidden="true"></i></p>
 <h3 id="thêm-vào-thư-viện">Thêm vào thư viện</h3>
-<pre><code>&lt;header&gt;
-&lt;!-- Khai báo trên head 2 --&gt;
-&lt;link href=&quot;dist/toasty.min.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;!-- script là để dưới thư viện jquery để tránh báo lỗi --&gt;
-&lt;script src=&quot;dist/toasty.min.js&quot;&gt;&lt;/script&gt;
-&lt;/header&gt;
-</code></pre><h3 id="sử-dụng">Sử dụng</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">header</span>&gt;
+    <span style="color:#75715e">&lt;!-- Khai báo trên head 2 --&gt;</span>
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dist/toasty.min.css&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span>&gt;
+    <span style="color:#75715e">&lt;!-- script là để dưới thư viện jquery để tránh báo lỗi --&gt;</span>
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dist/toasty.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;/<span style="color:#f92672">header</span>&gt;
+</code></pre></div><h3 id="sử-dụng">Sử dụng</h3>
 <p>Sau khi đã cài những thành phần cần thiết, bạn phải khai báo thư viện nó như sau :</p>
-<pre><code>&lt;script&gt;
-var toast = new Toasty();
-// Hiện thông báo bình thường
-toast.info(&quot;Một vài thông tin!&quot;);
- // Hiện thông báo thành công
-toast.success(&quot;Thực thi thành công!&quot;);
-// Hiện cảnh báo
-toast.warning(&quot;Cảnh báo có khả năng xảy ra lỗi!&quot;);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">toast</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Toasty</span>();
+    <span style="color:#75715e">// Hiện thông báo bình thường
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">toast</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;Một vài thông tin!&#34;</span>);
+    <span style="color:#75715e">// Hiện thông báo thành công
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">toast</span>.<span style="color:#a6e22e">success</span>(<span style="color:#e6db74">&#34;Thực thi thành công!&#34;</span>);
+    <span style="color:#75715e">// Hiện cảnh báo
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">toast</span>.<span style="color:#a6e22e">warning</span>(<span style="color:#e6db74">&#34;Cảnh báo có khả năng xảy ra lỗi!&#34;</span>);
 
-// Thông báo lỗi
-toast.error(&quot;Thực thi không thành công!&quot;);
-&lt;/script&gt; 
-</code></pre><p>Như các bạn đã thấy như ở trên, đó là cách khai báo của thư viện này, khá đơn giản phải không? Nhưng cái đó chỉ mới là bước đầu thôi.</p>
+    <span style="color:#75715e">// Thông báo lỗi
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">toast</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;Thực thi không thành công!&#34;</span>);
+</code></pre></div><p>Như các bạn đã thấy như ở trên, đó là cách khai báo của thư viện này, khá đơn giản phải không? Nhưng cái đó chỉ mới là bước đầu thôi.</p>
 <h2 id="chỉnh-sửa">Chỉnh sửa</h2>
 <p>Toastr cho phép người dùng có thể điều chỉnh thông báo một cách thoải mái nhất. Bạn có thể chỉnh sửa luôn cả CSS của thông báo. Phần sau mình sẽ đề cập đến việc này. Bây giờ hãy cùng xem qua những tính năng của thư viện này nhé</p>
-<pre><code>var options = {
-    //ghi chú: Class mặc định của Toasty, khuyến khích là cứ để mặc định, nếu thay đổi thì thư viện sẽ coi như bạn đang thiết lặp toàn bộ và tất cả các kiểu css, transtions... có sẵn sẽ bị mất đi.
-        classname: &quot;toast&quot;,
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> {
+    <span style="color:#75715e">//ghi chú: Class mặc định của Toasty, khuyến khích là cứ để mặc định, nếu thay đổi thì thư viện sẽ coi như bạn đang thiết lặp toàn bộ và tất cả các kiểu css, transtions... có sẵn sẽ bị mất đi.
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">classname</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;toast&#34;</span>,
     
-    transition: &quot;fade&quot;,
-    // transition: hiệu ứng hiện/đóng thông báo
-    
+    <span style="color:#a6e22e">transition</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;fade&#34;</span>,
+    <span style="color:#75715e">// transition: hiệu ứng hiện/đóng thông báo
+</span><span style="color:#75715e"></span>    
    
-    duration: 4000,
-    // duration: mặc định là 4000 milisecond, là thời gian chờ của thông báo. Nếu chỉnh xuống 0 thì sẽ phụ thuộc vào độ dài của thông báo 
-
-    // enableSounds : (True hay False) 
-    Bật âm thanh thông báo. Không hỗ trợ cho các thiết bị điện thoại
+    <span style="color:#a6e22e">duration</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">4000</span>,
+    <span style="color:#75715e">// duration: mặc định là 4000 milisecond, là thời gian chờ của thông báo. Nếu chỉnh xuống 0 thì sẽ phụ thuộc vào độ dài của thông báo 
+</span><span style="color:#75715e"></span>
+    <span style="color:#75715e">// enableSounds : (True hay False) 
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">Bật</span> <span style="color:#a6e22e">âm</span> <span style="color:#a6e22e">thanh</span> <span style="color:#a6e22e">thông</span> <span style="color:#a6e22e">báo</span>. <span style="color:#a6e22e">Không</span> <span style="color:#a6e22e">hỗ</span> <span style="color:#a6e22e">trợ</span> <span style="color:#a6e22e">cho</span> <span style="color:#a6e22e">các</span> <span style="color:#a6e22e">thiết</span> <span style="color:#a6e22e">bị</span> <span style="color:#a6e22e">điện</span> <span style="color:#a6e22e">thoại</span>
     
-    enableSounds: false,
-    autoClose: true,
-    // autoClose ( true hay False) - Tự động tắt thông báo hay không? 
-    // Progress-bar (true hay false) - tiến trình - Nếu option autoClose: true  
-    
-    progressBar: false,
-    // Toasty hỗ trợ cho việc thêm các âm thanh khác nhau cho từng loại thông báo.
-    Toasty đã cung cấp sẵn một vài âm thanh cơ bản trong thư mục dist.
-    sounds: {
-        info: &quot;./dist/sounds/info/1.mp3&quot;,
-        success: &quot;./dist/sounds/success/1.mp3&quot;,
-        warning: &quot;./dist/sounds/warning/1.mp3&quot;,
-        error: &quot;./dist/sounds/error/1.mp3&quot;,
+    <span style="color:#a6e22e">enableSounds</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+    <span style="color:#a6e22e">autoClose</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#75715e">// autoClose ( true hay False) - Tự động tắt thông báo hay không? 
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Progress-bar (true hay false) - tiến trình - Nếu option autoClose: true  
+</span><span style="color:#75715e"></span>    
+    <span style="color:#a6e22e">progressBar</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+    <span style="color:#75715e">// Toasty hỗ trợ cho việc thêm các âm thanh khác nhau cho từng loại thông báo.
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">Toasty</span> <span style="color:#a6e22e">đã</span> <span style="color:#a6e22e">cung</span> <span style="color:#a6e22e">cấp</span> <span style="color:#a6e22e">sẵn</span> <span style="color:#a6e22e">một</span> <span style="color:#a6e22e">vài</span> <span style="color:#a6e22e">âm</span> <span style="color:#a6e22e">thanh</span> <span style="color:#a6e22e">cơ</span> <span style="color:#a6e22e">bản</span> <span style="color:#a6e22e">trong</span> <span style="color:#a6e22e">thư</span> <span style="color:#a6e22e">mục</span> <span style="color:#a6e22e">dist</span>.
+    <span style="color:#a6e22e">sounds</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">info</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;./dist/sounds/info/1.mp3&#34;</span>,
+        <span style="color:#a6e22e">success</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;./dist/sounds/success/1.mp3&#34;</span>,
+        <span style="color:#a6e22e">warning</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;./dist/sounds/warning/1.mp3&#34;</span>,
+        <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;./dist/sounds/error/1.mp3&#34;</span>,
     },
 
-    // callback:
-    // chạy callback sau khi hiện ra thông báo bằng sự kiện onshow
-    onShow: function (type) {},
+    <span style="color:#75715e">// callback:
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// chạy callback sau khi hiện ra thông báo bằng sự kiện onshow
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">onShow</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">type</span>) {},
 
-    // callback:
-    // onHide function will be fired when a toast message disappears.
-    // chạy callback  sau khi thông báo biến mất
-    onHide: function (type) {},
+    <span style="color:#75715e">// callback:
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// onHide function will be fired when a toast message disappears.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// chạy callback  sau khi thông báo biến mất
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">onHide</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">type</span>) {},
 
-    prependTo: document.body.childNodes[0]
+    <span style="color:#a6e22e">prependTo</span><span style="color:#f92672">:</span> document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">childNodes</span>[<span style="color:#ae81ff">0</span>]
 };
 
-</code></pre><p>Sau khi chỉnh sửa các điều chỉnh trên, người cần phải khai báo theo cách này để hiện thông báo</p>
-<pre><code>var toast = new Toasty(options);
-// có thể khai báo để sử dụng cho toàn trang
-toast.configure(options);
+</code></pre></div><p>Sau khi chỉnh sửa các điều chỉnh trên, người cần phải khai báo theo cách này để hiện thông báo</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">toast</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Toasty</span>(<span style="color:#a6e22e">options</span>);
+<span style="color:#75715e">// có thể khai báo để sử dụng cho toàn trang
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">toast</span>.<span style="color:#a6e22e">configure</span>(<span style="color:#a6e22e">options</span>);
 
-</code></pre><h3 id="tự-viết-transitions">Tự viết transitions</h3>
+</code></pre></div><h3 id="tự-viết-transitions">Tự viết transitions</h3>
 <p>Toasty mặc định hỗ trợ đến 10 transition. Cụ thể :</p>
 <pre><code>fade slideLeftFade
 slideLeftRightFade
@@ -194,252 +205,256 @@ pinItDow
 <ul>
 <li>Mở file <strong>toasty.css</strong></li>
 </ul>
-<pre><code>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">
 
-// ví dụ một transtiton có sẵn 
-.toast {
-    transition: 0.32s all ease-in-out;
-}
-
-/* a [fade] transition (DEFAULT TRANSITION IN THE PLUGIN): */
-.toast-container--fade {
-     right: 0;
-    bottom: 0;
-}
-.toast-container--fade .toast-wrapper { display: inline-block; }
-.toast.fade-init { opacity: 0; }
-.toast.fade-show { opacity: 1; }
-.toast.fade-hide { opacity: 0; }
-/* ------------------------------------------------------------------------- */
-</code></pre><p>Với cấu trúc có sẵn. Giờ mình sẽ tự tạo một transtition mới gọi là &ldquo;<strong>fade</strong>&rdquo;</p>
-<pre><code>.toast {
-    transition: 0.32s all ease-in-out;
+<span style="color:#f92672">//</span> <span style="color:#f92672">ví</span> <span style="color:#f92672">dụ</span> <span style="color:#f92672">một</span> <span style="color:#f92672">transtiton</span> <span style="color:#f92672">có</span> <span style="color:#f92672">sẵn</span> 
+.<span style="color:#a6e22e">toast</span> {
+    <span style="color:#66d9ef">transition</span>: <span style="color:#ae81ff">0.32</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">all</span> <span style="color:#66d9ef">ease</span><span style="color:#f92672">-</span>in-out;
 }
 
-/* a [scale] transition: */
-.toast-container--scale {
-     right: 0;
-    bottom: 0;
+<span style="color:#75715e">/* a [fade] transition (DEFAULT TRANSITION IN THE PLUGIN): */</span>
+.<span style="color:#a6e22e">toast-container--fade</span> {
+     <span style="color:#66d9ef">right</span>: <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">bottom</span>: <span style="color:#ae81ff">0</span>;
 }
-.toast-container--scale .toast-wrapper { display: inline-block; }
-.toast.scale-init { opacity: 0; transform: scale(0); }
-.toast.scale-show { opacity: 1; transform: scale(1); }
-.toast.scale-hide { opacity: 0; transform: scale(0); }
-</code></pre><ul>
+.<span style="color:#a6e22e">toast-container--fade</span> .<span style="color:#a6e22e">toast-wrapper</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">block</span>; }
+.<span style="color:#a6e22e">toast</span>.<span style="color:#a6e22e">fade-init</span> { <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0</span>; }
+.<span style="color:#a6e22e">toast</span>.<span style="color:#a6e22e">fade-show</span> { <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">1</span>; }
+.<span style="color:#a6e22e">toast</span>.<span style="color:#a6e22e">fade-hide</span> { <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0</span>; }
+<span style="color:#75715e">/* ------------------------------------------------------------------------- */</span>
+</code></pre></div><p>Với cấu trúc có sẵn. Giờ mình sẽ tự tạo một transtition mới gọi là &ldquo;<strong>fade</strong>&rdquo;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    .<span style="color:#a6e22e">toast</span> {
+        <span style="color:#66d9ef">transition</span>: <span style="color:#ae81ff">0.32</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">all</span> <span style="color:#66d9ef">ease</span><span style="color:#f92672">-</span>in-out;
+    }
+
+    <span style="color:#75715e">/* a [scale] transition: */</span>
+    .<span style="color:#a6e22e">toast-container--scale</span> {
+        <span style="color:#66d9ef">right</span>: <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">bottom</span>: <span style="color:#ae81ff">0</span>;
+    }
+    .<span style="color:#a6e22e">toast-container--scale</span> .<span style="color:#a6e22e">toast-wrapper</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">block</span>; }
+    .<span style="color:#a6e22e">toast</span>.<span style="color:#a6e22e">scale-init</span> { <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">transform</span>: scale(<span style="color:#ae81ff">0</span>); }
+    .<span style="color:#a6e22e">toast</span>.<span style="color:#a6e22e">scale-show</span> { <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">1</span>; <span style="color:#66d9ef">transform</span>: scale(<span style="color:#ae81ff">1</span>); }
+    .<span style="color:#a6e22e">toast</span>.<span style="color:#a6e22e">scale-hide</span> { <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">transform</span>: scale(<span style="color:#ae81ff">0</span>); }
+</code></pre></div><ul>
 <li>Khai báo transition mới sau khi tạo</li>
 </ul>
-<pre><code>var toast = new Toasty();
-toast.transition(&quot;scale&quot;);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">toast</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Toasty</span>();
+<span style="color:#a6e22e">toast</span>.<span style="color:#a6e22e">transition</span>(<span style="color:#e6db74">&#34;scale&#34;</span>);
 
-toast.info(&quot;Khai báo transtion scale thành công&quot;);
+<span style="color:#a6e22e">toast</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;Khai báo transtion scale thành công&#34;</span>);
 
-</code></pre><h3 id="css">CSS</h3>
-<pre><code>/* STYLE MẶC ĐỊNH */
+</code></pre></div><h3 id="css-được-cung-cấp-sẵn">CSS được cung cấp sẵn</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">   <span style="color:#75715e">/* STYLE MẶC ĐỊNH */</span>
 
-.toast-container {
-   position: fixed;
-   z-index: 999999;
-   pointer-events: none;
-}
-/* Container */
-.toast-container .toast-wrapper {
-   position: relative;
-}
-/* Hiện âm thanh . */
-/* Normally, this is a hidden wildcard: */
-.toast-container .toast-soundplayer {
-   display: none;
-   visibility: hidden;
-}
+   .<span style="color:#a6e22e">toast-container</span> {
+       <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">fixed</span>;
+       <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">999999</span>;
+       pointer-events: <span style="color:#66d9ef">none</span>;
+   }
+   <span style="color:#75715e">/* Container */</span>
+   .<span style="color:#a6e22e">toast-container</span> .<span style="color:#a6e22e">toast-wrapper</span> {
+       <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+   }
+   <span style="color:#75715e">/* Hiện âm thanh . */</span>
+   <span style="color:#75715e">/* Normally, this is a hidden wildcard: */</span>
+   .<span style="color:#a6e22e">toast-container</span> .<span style="color:#a6e22e">toast-soundplayer</span> {
+       <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
+       <span style="color:#66d9ef">visibility</span>: <span style="color:#66d9ef">hidden</span>;
+   }
 
-/**
-* THÔNG BÁO :
-* -------------------------------------------------- */
-
-
-.toast {
-   position: relative;
-   pointer-events: none;
-   -webkit-transition: all 0.32s ease-in-out;
-      -moz-transition: all 0.32s ease-in-out;
-       -ms-transition: all 0.32s ease-in-out;
-        -o-transition: all 0.32s ease-in-out;
-           transition: all 0.32s ease-in-out;
-}
-
-/* informational toast class: */
-.toast--info {}
-
-/* successful toast class: */
-.toast--success {}
-
-/* warning toast class: */
-.toast--warning {}
-
-/* error toast class: */
-.toast--error {}
-
-/* this class is assigned to each toast message when autoClose
-* plugin option is set to BOOLEAN false. */
-/* Normally, this is a pointer events handler:*/
-.toast.close-on-click {
-   cursor: pointer;
-   pointer-events: auto;
-}
-
-/**
-* CSS THANH THỜI GIAN
-* -------------------------------------------------- */
+   <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * THÔNG BÁO :
+</span><span style="color:#75715e">   * -------------------------------------------------- */</span>
 
 
-.toast-progressbar {
-   -webkit-transition: width 0s ease;
-      -moz-transition: width 0s ease;
-       -ms-transition: width 0s ease;
-        -o-transition: width 0s ease;
-           transition: width 0s ease;
-}
+   .<span style="color:#a6e22e">toast</span> {
+       <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+       pointer-events: <span style="color:#66d9ef">none</span>;
+       <span style="color:#66d9ef">-webkit-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.32</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span><span style="color:#f92672">-</span>in-out;
+       <span style="color:#66d9ef">-moz-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.32</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span><span style="color:#f92672">-</span>in-out;
+           <span style="color:#66d9ef">-ms-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.32</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span><span style="color:#f92672">-</span>in-out;
+           <span style="color:#66d9ef">-o-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.32</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span><span style="color:#f92672">-</span>in-out;
+               <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.32</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span><span style="color:#f92672">-</span>in-out;
+   }
 
-/* progress bar color for each toast type: */
-.toast-progressbar--info {}
-.toast-progressbar--success {}
-.toast-progressbar--warning {}
-.toast-progressbar--error {}
-</code></pre><ul>
-<li>Viết lại css với tên class mới, gọi là alert <strong>.alert</strong></li>
+   <span style="color:#75715e">/* informational toast class: */</span>
+   .<span style="color:#a6e22e">toast--info</span> {}
+
+   <span style="color:#75715e">/* successful toast class: */</span>
+   .<span style="color:#a6e22e">toast--success</span> {}
+
+   <span style="color:#75715e">/* warning toast class: */</span>
+   .<span style="color:#a6e22e">toast--warning</span> {}
+
+   <span style="color:#75715e">/* error toast class: */</span>
+   .<span style="color:#a6e22e">toast--error</span> {}
+
+   <span style="color:#75715e">/* this class is assigned to each toast message when autoClose
+</span><span style="color:#75715e">   * plugin option is set to BOOLEAN false. */</span>
+   <span style="color:#75715e">/* Normally, this is a pointer events handler:*/</span>
+   .<span style="color:#a6e22e">toast</span>.<span style="color:#a6e22e">close-on-click</span> {
+       <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
+       pointer-events: <span style="color:#66d9ef">auto</span>;
+   }
+
+   <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * CSS THANH THỜI GIAN
+</span><span style="color:#75715e">   * -------------------------------------------------- */</span>
+
+
+   .<span style="color:#a6e22e">toast-progressbar</span> {
+       <span style="color:#66d9ef">-webkit-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
+       <span style="color:#66d9ef">-moz-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
+           <span style="color:#66d9ef">-ms-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
+           <span style="color:#66d9ef">-o-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
+               <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
+   }
+
+   <span style="color:#75715e">/* progress bar color for each toast type: */</span>
+   .<span style="color:#a6e22e">toast-progressbar--info</span> {}
+   .<span style="color:#a6e22e">toast-progressbar--success</span> {}
+   .<span style="color:#a6e22e">toast-progressbar--warning</span> {}
+   .<span style="color:#a6e22e">toast-progressbar--error</span> {}
+</code></pre></div><ul>
+<li>Viết lại css với tên class mới có tên là <strong>.alert</strong></li>
 </ul>
-<pre><code>.alert-container {
-    position: fixed;
-    z-index: 999999;
-    pointer-events: none;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    .<span style="color:#a6e22e">alert-container</span> {
+        <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">fixed</span>;
+        <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">999999</span>;
+        pointer-events: <span style="color:#66d9ef">none</span>;
 
-    background-color: rgba(255,255,255, 0.32);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-}
-/* the wrapper where the toast messages appends: */
-.alert-container .alert-wrapper {
-    position: relative;
+        <span style="color:#66d9ef">background-color</span>: rgba(<span style="color:#ae81ff">255</span>,<span style="color:#ae81ff">255</span>,<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.32</span>);
+        <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">right</span>: <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">bottom</span>: <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+    }
+    <span style="color:#75715e">/* the wrapper where the toast messages appends: */</span>
+    .<span style="color:#a6e22e">alert-container</span> .<span style="color:#a6e22e">alert-wrapper</span> {
+        <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
 
-    display: inline-block;
-    margin: 0 auto;
-}
-/* the class that is assigned to the sound player. */
-/* Normally, this is a hidden wildcard: */
-.alert-container .alert-soundplayer {
-    display: none;
-    visibility: hidden;
-}
+        <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">block</span>;
+        <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">auto</span>;
+    }
+    <span style="color:#75715e">/* the class that is assigned to the sound player. */</span>
+    <span style="color:#75715e">/* Normally, this is a hidden wildcard: */</span>
+    .<span style="color:#a6e22e">alert-container</span> .<span style="color:#a6e22e">alert-soundplayer</span> {
+        <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
+        <span style="color:#66d9ef">visibility</span>: <span style="color:#66d9ef">hidden</span>;
+    }
 
-/**
- * Toast messages styles:
- * -------------------------------------------------- */
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">    * Toast messages styles:
+</span><span style="color:#75715e">    * -------------------------------------------------- */</span>
 
-/* each toast message gets this style: */
-.alert {
-    position: relative;
-    pointer-events: none;
-    -webkit-transition: all 0.32s ease-in-out;
-       -moz-transition: all 0.32s ease-in-out;
-        -ms-transition: all 0.32s ease-in-out;
-         -o-transition: all 0.32s ease-in-out;
-            transition: all 0.32s ease-in-out;
+    <span style="color:#75715e">/* each toast message gets this style: */</span>
+    .<span style="color:#a6e22e">alert</span> {
+        <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+        pointer-events: <span style="color:#66d9ef">none</span>;
+        <span style="color:#66d9ef">-webkit-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.32</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span><span style="color:#f92672">-</span>in-out;
+        <span style="color:#66d9ef">-moz-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.32</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span><span style="color:#f92672">-</span>in-out;
+            <span style="color:#66d9ef">-ms-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.32</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span><span style="color:#f92672">-</span>in-out;
+            <span style="color:#66d9ef">-o-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.32</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span><span style="color:#f92672">-</span>in-out;
+                <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.32</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span><span style="color:#f92672">-</span>in-out;
 
 
-    display: block;
-    margin: 4% auto 0 auto;
-    padding: 2em 2em;
-    background-color: #fff;
-    color: #505050;
-    max-width: 100%;
-    font-size: 1.25em;
-    overflow: hidden;
-    border-radius: 6px;
-    box-shadow: 1px 1px 12px 2px rgba(0,0,0, 0.32);
-}
+        <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;
+        <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">%</span> <span style="color:#66d9ef">auto</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">auto</span>;
+        <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#fff</span>;
+        <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#505050</span>;
+        <span style="color:#66d9ef">max-width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+        <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1.25</span><span style="color:#66d9ef">em</span>;
+        <span style="color:#66d9ef">overflow</span>: <span style="color:#66d9ef">hidden</span>;
+        <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">6</span><span style="color:#66d9ef">px</span>;
+        <span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">12</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.32</span>);
+    }
 
-/* informational toast class: */
-.alert--info { color: #31708F; }
+    <span style="color:#75715e">/* informational toast class: */</span>
+    .<span style="color:#a6e22e">alert--info</span> { <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#31708F</span>; }
 
-/* successful toast class: */
-.alert--success { color: #3C763D; }
+    <span style="color:#75715e">/* successful toast class: */</span>
+    .<span style="color:#a6e22e">alert--success</span> { <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#3C763D</span>; }
 
-/* warning toast class: */
-.alert--warning { color: #8A6D3B; }
+    <span style="color:#75715e">/* warning toast class: */</span>
+    .<span style="color:#a6e22e">alert--warning</span> { <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#8A6D3B</span>; }
 
-/* error toast class: */
-.alert--error { color: #A94442; }
+    <span style="color:#75715e">/* error toast class: */</span>
+    .<span style="color:#a6e22e">alert--error</span> { <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#A94442</span>; }
 
-/* this class is assigned to each toast message when autoClose
- * plugin option is set to BOOLEAN false. */
-/* Normally, this is a pointer events handler:*/
-.alert.close-on-click {
-    cursor: pointer;
-    pointer-events: auto;
-}
+    <span style="color:#75715e">/* this class is assigned to each toast message when autoClose
+</span><span style="color:#75715e">    * plugin option is set to BOOLEAN false. */</span>
+    <span style="color:#75715e">/* Normally, this is a pointer events handler:*/</span>
+    .<span style="color:#a6e22e">alert</span>.<span style="color:#a6e22e">close-on-click</span> {
+        <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
+        pointer-events: <span style="color:#66d9ef">auto</span>;
+    }
 
-/**
- * Progress bar styles:
- * -------------------------------------------------- */
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">    * Progress bar styles:
+</span><span style="color:#75715e">    * -------------------------------------------------- */</span>
 
-/* each progress bar gets this style: */
-.alert-progressbar {
-    -webkit-transition: width 0s ease;
-       -moz-transition: width 0s ease;
-        -ms-transition: width 0s ease;
-         -o-transition: width 0s ease;
-            transition: width 0s ease;
+    <span style="color:#75715e">/* each progress bar gets this style: */</span>
+    .<span style="color:#a6e22e">alert-progressbar</span> {
+        <span style="color:#66d9ef">-webkit-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
+        <span style="color:#66d9ef">-moz-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
+            <span style="color:#66d9ef">-ms-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
+            <span style="color:#66d9ef">-o-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
+                <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
 
-    position: absolute;
-    height: 4px;
-    width: 0%;
-    left: 0px;
-    bottom: 0px;
-    opacity: 0.5;
-}
+        <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+        <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>;
+        <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span>;
+        <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>;
+        <span style="color:#66d9ef">bottom</span>: <span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>;
+        <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0.5</span>;
+    }
 
-/* progress bar color for each toast type: */
-.alert-progressbar--info { background-color: #91C5F2; }
-.alert-progressbar--success { background-color: #A6CA8A; }
-.alert-progressbar--warning { background-color: #F2C779; }
-.alert-progressbar--error { background-color: #F5ACA6; }
-</code></pre><ul>
-<li>Việc thay đổi tên Class đồng nghĩa là các thuộc tính css và transtion sẽ mất hết vì thế cần phải viết lại toàn bộ transitions. Mình sẽ thử viết lại một class mới gọi là <strong>alert</strong>.</li>
-</ul>
-<pre><code>.alert {
-    transition: 0.32s all ease-in-out;
-}
+    <span style="color:#75715e">/* progress bar color for each toast type: */</span>
+    .<span style="color:#a6e22e">alert-progressbar--info</span> { <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#91C5F2</span>; }
+    .<span style="color:#a6e22e">alert-progressbar--success</span> { <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#A6CA8A</span>; }
+    .<span style="color:#a6e22e">alert-progressbar--warning</span> { <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#F2C779</span>; }
+    .<span style="color:#a6e22e">alert-progressbar--error</span> { <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#F5ACA6</span>; }
 
-/* a [scale] transition: */
-.alert-container--scale {
-     right: 0;
-    bottom: 0;
-}
-.alert-container--scale .alert-wrapper { display: inline-block; }
-.alert.scale-init { opacity: 0; transform: scale(0); }
-.alert.scale-show { opacity: 1; transform: scale(1); }
-.alert.scale-hide { opacity: 0; transform: scale(0); }
-/* ------------------------------------------------------------------------- */
-</code></pre><p>Khai báo config để nhận class mới và transtion mới</p>
-<pre><code>var toast = new Toasty({
-        classname: &quot;alert&quot;,
-       insertBefore: false,
-       progressBar: true,
-       enableSounds: false
-});
+</code></pre></div><p>Việc thay đổi tên Class đồng nghĩa là các thuộc tính css và transtion sẽ mất hết vì thế cần phải viết lại toàn bộ transitions.
+Mình sẽ thử viết lại một class mới gọi là <strong>alert</strong>. */</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    <span style="color:#75715e">/* css cho class alert */</span>
+    .<span style="color:#a6e22e">alert</span> {
+        <span style="color:#66d9ef">transition</span>: <span style="color:#ae81ff">0.32</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">all</span> <span style="color:#66d9ef">ease</span><span style="color:#f92672">-</span>in-out;
+    }
 
-// gọi transtion mới
-toast.transition(&quot;scale&quot;);
+    <span style="color:#75715e">/* a [scale] transition: */</span>
+    .<span style="color:#a6e22e">alert-container--scale</span> {
+        <span style="color:#66d9ef">right</span>: <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">bottom</span>: <span style="color:#ae81ff">0</span>;
+    }
+    .<span style="color:#a6e22e">alert-container--scale</span> .<span style="color:#a6e22e">alert-wrapper</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">block</span>; }
+    .<span style="color:#a6e22e">alert</span>.<span style="color:#a6e22e">scale-init</span> { <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">transform</span>: scale(<span style="color:#ae81ff">0</span>); }
+    .<span style="color:#a6e22e">alert</span>.<span style="color:#a6e22e">scale-show</span> { <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">1</span>; <span style="color:#66d9ef">transform</span>: scale(<span style="color:#ae81ff">1</span>); }
+    .<span style="color:#a6e22e">alert</span>.<span style="color:#a6e22e">scale-hide</span> { <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">transform</span>: scale(<span style="color:#ae81ff">0</span>); }
+<span style="color:#75715e">/* ------------------------------------------------------------------------- */</span>
+</code></pre></div><p>Khai báo config để nhận class mới và transtion mới</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">toast_new</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Toasty</span>({
+        <span style="color:#a6e22e">classname</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;alert&#34;</span>,
+        <span style="color:#a6e22e">insertBefore</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+        <span style="color:#a6e22e">progressBar</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+        <span style="color:#a6e22e">enableSounds</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+    });
 
-toast.info(&quot;Class Toastr và Scale Transtion.&quot;);
-</code></pre><p><a href="!http://jakim.me/Toasty.js/">DEMO</a>
+<span style="color:#75715e">// gọi transtion mới 
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">toast_new</span>.<span style="color:#a6e22e">transition</span>(<span style="color:#e6db74">&#34;scale&#34;</span>);
+    <span style="color:#75715e">// khai báo class alert và transition scale
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">toast_new</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;Gọi thành công&#34;</span>);
+
+</code></pre></div><p>
+<a class = "url-text"href="!http://jakim.me/Toasty.js/">DEMO</a>
 <i class="fa fa-link" aria-hidden="true"></i></p>
 <h2 id="kết-luận">Kết luận</h2>
-<p>Như vậy là mình đã xong review về thư viện Toasty này. Nếu các bạn thích thì hãy theo dõi <a href="!https://github.com/egalink/">tác giả</a>
-<i class="fa fa-link" aria-hidden="true"></i> để nhận những thông tin về cập nhật mới nhất !</p>
+<p>Như vậy là mình đã xong review về thư viện Toasty này. Nếu các bạn thích thì hãy theo dõi repository của tác giả 
+<a class = "url-text"href="!https://github.com/egalink/">tại đây</a>
+<i class="fa fa-link" aria-hidden="true"></i> để nhận những thông tin về cập nhật mới nhất nhé.</p>
 </p>
             
             <hr class="endpost">
@@ -451,7 +466,7 @@ toast.info(&quot;Class Toastr và Scale Transtion.&quot;);
                     </div>
             <div class="col-md-6 right float-right">
                 
-                <p><a href="http://buinguyenhoangtho.github.io/bai-viet/bing-wallpaper-clone/" class="nav-title">Tự viết Chrome Extension thay đổi wallpaper theo từng ngày </a></p>
+                <p><a href="http://buinguyenhoangtho.github.io/bai-viet/bing-wallpaper-clone/" class="nav-title">Extension thay đổi wallpaper theo từng ngày </a></p>
     
 
             </div>

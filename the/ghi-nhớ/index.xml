@@ -13,9 +13,7 @@
       <pubDate>Wed, 17 Feb 2021 06:19:23 +0000</pubDate>
       
       <guid>http://buinguyenhoangtho.github.io/bai-viet/javascript-array-objects/</guid>
-      <description>Mở đầu Khi học và làm việc với Javascript, Array và Object có thể lưu trữ nhiều dữ liệu. Vậy Array và Object có gì khác nhau? Mini series sẽ được chia thành hai phần và sẽ cover đầy đủ lại kiến thức cơ bản cần phải nhớ khi làm việc với Array và Object.
-Mảng là gì? 1.1 Định nghĩa cơ bản về mảng :
- Mảng (array) được sắp xếp theo thứ tự chuỗi giá trị.</description>
+      <description>Mở đầu Khi học và làm việc với Javascript, chắc hẳn các bạn sẽ được làm quen với các khái niệm về mảng (Array) và đối tượng (Object). Cả hai đều cho phép chúng ta lưu trữ dữ liệu. Vậy giữa chúng có những gì khác nhau. Mini series sẽ được chia thành hai phần và sẽ tóm gọn lại những phần cơ bản cần phải nhớ khi xử lí chúng.</description>
     </item>
     
   </channel>
