@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Blog của tôi</title>
+    <link>http://buinguyenhoangtho.github.io/the/linux/</link>
+    <description>Recent content in Linux on Blog của tôi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>VN-vi</language>
+    <lastBuildDate>Thu, 10 Jun 2021 11:21:22 +0000</lastBuildDate><atom:link href="http://buinguyenhoangtho.github.io/the/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WSL2&#43;oh My Fish Tmux= awsome terminal!</title>
+      <link>http://buinguyenhoangtho.github.io/bai-viet/wsl2-fish-tmux-awsome-terminal/</link>
+      <pubDate>Thu, 10 Jun 2021 11:21:22 +0000</pubDate>
+      
+      <guid>http://buinguyenhoangtho.github.io/bai-viet/wsl2-fish-tmux-awsome-terminal/</guid>
+      <description>Giới thiệu: Hôm nay mình sẽ hướng dẫn cách cài đặt và tuỳ chỉnh WSL2 một cách đơn giản nhất, không phức tạp cầu kì và cách tích hợp WSL2 vào Terminal
+CÀI ĐẶT WSL2 trên Windows 10 Yêu cầu
+ Window 10: Version 1903 or higher, with Build 18362 or higher. Mở powershell (run as Admin) và chạy lệnh:
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart Khởi động lại máy tính</description>
+    </item>
+    
+  </channel>
+</rss>

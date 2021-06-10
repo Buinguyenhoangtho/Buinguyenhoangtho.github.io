@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="VN-vi"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/sunburst.css.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    
+    
+    
+<title>WSL2&#43;oh My Fish Tmux= awsome terminal! | Blog của tôi</title>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head><body><div class="container">
+    <div class="row">
+            
+            <nav class="navbar navbar-light navbar-expand-lg  w-100">
+                <a class="navbar-brand" href="/" style="">Hoàng Thọ</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav">
+                        
+                        
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/the"> 🏷️ Thẻ</a>
+                          </li>
+                          
+                        
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ve-toi"> 😀Về tôi</a>
+                          </li>
+                          
+                        
+                        
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/buinguyenhoangtho?tab=repositories">
+                                Github
+                            </a> 
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://www.linkedin.com/in/b%C3%B9i-nguy%E1%BB%85n-ho%C3%A0ng-th%E1%BB%8D-2b136a1b0/">
+                             Linkedin
+                            </a>
+                          </li>
+                    </ul>
+                </div>
+            </nav>
+
+    </div>
+</div><main>
+
+
+<div class="container">
+
+<hr>
+    <div class="justify-content-around row">
+        <div class="col-md-8 single-wrapper">
+            
+            <p> <a href="/">&#8592; Quay về trang chủ</a></p>
+            <div class="text-center post-wrapper--tags">
+                
+                <a href="/the/linux">#Linux</a>
+                
+                <a href="/the/windows">#Windows</a>
+                
+            </div>
+            <h4 class="single-wrapper--title">WSL2&#43;oh My Fish Tmux= awsome terminal!</h4>
+            
+            <div class="text-center single-wrapper-detail">
+                
+                <span class="date">📅
+                    10
+                    tháng sáu,2021
+                    
+                    | 636 từ
+                </span> 
+
+                    
+            </div>
+            <p class="single-wrapper--content"><h2 id="giới-thiệu">Giới thiệu:</h2>
+<p><img src="https://i.imgur.com/hKvDXEZ.png" alt="finish">
+Hôm nay mình sẽ hướng dẫn cách cài đặt và tuỳ chỉnh WSL2 một cách đơn giản nhất, không phức tạp cầu kì và cách tích hợp WSL2 vào Terminal</p>
+<h2 id="cài-đặt-wsl2-trên-windows-10">CÀI ĐẶT WSL2 trên Windows 10</h2>
+<p><strong>Yêu cầu</strong></p>
+<pre><code>  Window 10: Version 1903 or higher, with Build 18362 or higher.
+</code></pre><p>Mở powershell (run as Admin) và chạy lệnh:</p>
+<pre><code>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+</code></pre><p>Khởi động lại máy tính</p>
+<ul>
+<li>Tải distro Ubuntu trên Windows Store và đăng kí user</li>
+</ul>
+<h2 id="cài-đặt-fish-shell">Cài đặt fish-shell</h2>
+<p><img src="https://i.imgur.com/kC9ltsd.png" alt="fish_config"></p>
+<p>Fish shell aka (Friendly interactive shell) thật sự là một sự thay thế đáng giá cho cái bash mặc định &ldquo;củ chuối&rdquo; của Linux
+Cụ thể, khi sử dụng fish. Bạn sẽ được những tính năng sau</p>
+<ul>
+<li>Hiện gợi ý các câu lệnh đã gõ ( như khi search website)</li>
+<li>Nhẹ - reponse nhanh</li>
+<li>Có thể tuỳ chỉnh giao diện nhanh thông qua giao diện web (<code>fish_config</code>)</li>
+</ul>
+<p>Tại cửa sổ wsl, gõ tiếp những lệnh sau</p>
+<pre><code>## cài đặt fish-shell
+apt-get update
+apt-get install fish
+</code></pre><ul>
+<li>fish-shell mặc định, nhập</li>
+</ul>
+<pre><code>chsh -s `which fish`
+</code></pre><p>Khởi động lại WSL</p>
+<h2 id="cài-đặt-plugins-omf--oh-my-fish-và-theme">Cài đặt plugins omf ( oh-my-fish) và theme</h2>
+<p>###oh-my-fish</p>
+<p>Một khi sử dụng fish-shell thì bạn nên cài đặt thêm framework <strong>oh-my-fish</strong>. Nó cung cấp sẵn cho bạn nhiều theme hay plugin hay ho để bạn có thể &ldquo;nghịch&rdquo;</p>
+<p>Gõ hoặc paste dòng lệnh dưới đây để cài đặt</p>
+<pre><code>curl -L https://get.oh-my.fish | fish
+</code></pre><p>Mình sẽ giới thiệu sơ qua một vài dòng lệnh cơ bản của omf</p>
+<pre><code>omf list &lt;lấy danh sách plugins/theme&gt;
+omf install &lt;tên-theme/tên-plugins&gt; # cài đặt theme/plugins
+omf remove &lt;tên theme/plugin&gt; # xoá theme/plugins
+</code></pre><h2 id="tmux">Tmux:</h2>
+<p><img src="https://i.imgur.com/3zyu7SO.png" alt="61fwppsuowhaoyfcy0na[1]">
+Ảnh tham khảo</p>
+<blockquote>
+<p>Định nghĩa trên trang <a href="https://tmux.github.io/">https://tmux.github.io/</a> có nói rằng: Tmux là một Terminal Multiplexer - &ldquo;bộ ghép kênh&rdquo;. Nó cho phép bạn chuyển qua lại giữa các chương trình độc lập ngay trên một terminal, tách các chương trình ra một terminal riêng mà vẫn giữ được trạng thái hoạt động của chúng. Và còn làm được nhiều việc hơn thế nữa&hellip; - <strong>Viblo</strong></p>
+</blockquote>
+<p>Để cài đặt tmux, sử dụng lệnh</p>
+<pre><code>sudo apt-get update 
+sudo apt-get install tmux 
+
+</code></pre><p>Cài đặt xong tmux, các bạn <strong>CẨN</strong> cài đặt thêm plugins tmux-zen của oh-my-fish để tmux chạy mặc định trên fish-shell :</p>
+<pre><code>omf install tmux-zen
+</code></pre><h3 id="config-tmux">Config Tmux</h3>
+<p>Config này mình tham khảo tại đây. Để sử dụng chúng , các bạn gõ
+<code>sudo nano ~/.tmux.conf</code> và paste config. Nhớ lưu và khởi động lại fish-shell</p>
+<pre><code># remap prefix from 'C-b' to 'C-a'
+unbind C-b
+set-option -g prefix C-a
+bind-key C-a send-prefix
+
+# split panes using | and -
+# split panes using | and -
+bind | split-window -h 
+bind - split-window -v
+unbind '&quot;'
+unbind %
+
+# switch panes using Alt-arrow without prefix
+bind -n C-Left select-pane -L
+bind -n C-Right select-pane -R
+bind -n C-Up select-pane -U
+bind -n C-Down select-pane -D
+
+#mouse
+set -g mouse on
+# remove window bind with control- w 
+bind -n C-w kill-pane
+
+# kill sessions 
+bind -n C-S-w kill-session
+# rightbar
+set -g status-right ''
+
+#tmp
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+# Other examples:
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'git@github.com:user/plugin'
+# set -g @plugin 'git@bitbucket.com:user/plugin'
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+setw -g window-status-current-format &quot;#{pane_current_path}&quot;  
+# set interval 
+set -g status-interval 1
+#clock
+
+set -g status-right '%d/%m - %H:%M:%S '
+
+</code></pre><h2 id="bonus-thay-đổi-welcome-message-mặc-định-của-fish-shell">Bonus: Thay đổi welcome message mặc định của Fish-shell</h2>
+<pre><code>Để thay đổi lời nhắn, gõ:
+$ set fish_greeting : &lt;messeage&gt;
+
+</code></pre><p><img src="https://i.imgur.com/oNGHBUP.png" alt="fish_mess"></p>
+<h2 id="thay-dircolors">Thay dircolors</h2>
+<p><strong>Dircolors</strong>: hiện thị màu tên thư mục,tập tin &hellip;
+Gõ <code>sudo nano ~/.dircolors</code></p>
+<p>Thêm những dòng 
+<a class = "url-text"href="https://gist.githubusercontent.com/buinguyenhoangtho/ce2b0de59ebe8aeac0248aeb20e40268/raw/f45bee9afc96c5f3d8f5847fa59aa5291dbb8baa/my-theme.dircolor" target="_blank" rel="noopener">ở đây</a>
+<i class="fa fa-link" aria-hidden="true"></i>
+Kết quả:
+<img src="https://i.imgur.com/s6gjBgx.png" alt="ls"></p>
+<h2 id="tich-hợp-vào-windows-terminal">Tich hợp vào Windows Terminal</h2>
+<p><img src="https://i.imgur.com/ZKoKGbp.png" alt="control-panel-ws"></p>
+<ul>
+<li>Tải Windows Terminal trên Windows Store
+Tuỳ chỉnh Terminal:</li>
+<li><strong>Start up:-&gt; Default profile:</strong> Ubuntu</li>
+<li><strong>Profiles:-&gt; Ubuntu-&gt; Commandline:</strong> <code>wsl.exe -d Ubuntu</code></li>
+</ul>
+<h1 id="tham-khảo">Tham khảo:</h1>
+<p><a href="https://viblo.asia/p/gioi-thieu-co-ban-ve-tmux-zoZVRgLEMmg5">https://viblo.asia/p/gioi-thieu-co-ban-ve-tmux-zoZVRgLEMmg5</a></p>
+<p><a href="https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/">https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/</a></p>
+<p><a href="https://github.com/oh-my-fish/oh-my-fish">https://github.com/oh-my-fish/oh-my-fish</a></p>
+</p>
+            
+            <hr class="endpost">
+
+            <div class="container">
+                <div class="row justify-content-start ">
+                    <div class="col-md-6 left">
+                        
+                        <p><a href="http://buinguyenhoangtho.github.io/bai-viet/do-lai-giao-dien-cmder-giong-ubuntu-den-95/" class="nav-title">Độ lại giao diện cmder giống Ubuntu đến 95% </a></p>
+            
+                    </div>
+            <div class="col-md-6 right float-right">
+                
+
+            </div>
+            <hr class="endpost">
+        </div>
+        
+            </div>
+            </div>
+            
+            </div>        
+                    
+            </div>
+                
+        </div>
+        
+    </div>
+</div>
+
+        
+<hr class="my-4">
+<div class="container">
+    <div class="row">
+        <div class="my-sign mx-auto main-footer">
+            <span id="year"></span> Bùi Nguyễn Hoàng Thọ. 
+        </div>
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+                
+                    
+        
+    </div>
+</div></main>
+        
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+
+
+<script>hljs.highlightAll();</script>
+<script src="https://use.fontawesome.com/266465373f.js"></script>
+    </body>
+</html>
