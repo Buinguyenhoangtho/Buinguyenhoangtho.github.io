@@ -96,14 +96,15 @@
                     10
                     tháng sáu,2021
                     
-                    | 635 từ
+                    | 758 từ
                 </span> 
 
                     
             </div>
             <p class="single-wrapper--content"><h2 id="giới-thiệu">Giới thiệu:</h2>
 <p><img src="https://i.imgur.com/hKvDXEZ.png" alt="finish">
-Hôm nay mình sẽ hướng dẫn cách cài đặt và tuỳ chỉnh WSL2 một cách đơn giản nhất, không phức tạp cầu kì và cách tích hợp WSL2 vào Terminal</p>
+Hôm nay mình sẽ hướng dẫn cách cài đặt và tuỳ chỉnh WSL2 một cách đơn giản nhất, không phức tạp cầu kì và cách tích hợp WSL2 vào Terminal
+<strong>Cập nhật ngày 13/06/2021:</strong> sửa lỗi chính tả, châu chuốt câu cú v..v</p>
 <h2 id="cài-đặt-wsl2-trên-windows-10">CÀI ĐẶT WSL2 trên Windows 10</h2>
 <p><strong>Yêu cầu</strong></p>
 <pre><code>  Window 10: Version 1903 or higher, with Build 18362 or higher.
@@ -133,6 +134,7 @@ apt-get install fish
 </code></pre><p>Khởi động lại WSL</p>
 <h2 id="cài-đặt-plugins-omf--oh-my-fish-và-theme">Cài đặt plugins omf ( oh-my-fish) và theme</h2>
 <p>###oh-my-fish</p>
+<!-- raw HTML omitted -->
 <p>Một khi sử dụng fish-shell thì bạn nên cài đặt thêm framework <strong>oh-my-fish</strong>. Nó cung cấp sẵn cho bạn nhiều theme hay plugin hay ho để bạn có thể &ldquo;nghịch&rdquo;</p>
 <p>Gõ hoặc paste dòng lệnh dưới đây để cài đặt</p>
 <pre><code>curl -L https://get.oh-my.fish | fish
@@ -154,7 +156,9 @@ sudo apt-get install tmux
 </code></pre><p>Cài đặt xong tmux, các bạn <strong>CẨN</strong> cài đặt thêm plugins tmux-zen của oh-my-fish để tmux chạy mặc định trên fish-shell :</p>
 <pre><code>omf install tmux-zen
 </code></pre><h3 id="config-tmux">Config Tmux</h3>
-<p>Config này mình tham khảo tại đây. Để sử dụng chúng , các bạn gõ
+<p>Config này mình tham khảo 
+<a class = "url-text"href="https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/" target="_blank" rel="noopener">tại đây</a>
+<i class="fa fa-link" aria-hidden="true"></i>. Để sử dụng chúng , các bạn gõ
 <code>sudo nano ~/.tmux.conf</code> và paste config. Nhớ lưu và khởi động lại fish-shell</p>
 <pre><code># remap prefix from 'C-b' to 'C-a'
 unbind C-b
@@ -201,7 +205,8 @@ set -g status-interval 1
 set -g status-right '%d/%m - %H:%M:%S '
 
 </code></pre><h2 id="bonus-thay-đổi-welcome-message-mặc-định-của-fish-shell">Bonus: Thay đổi welcome message mặc định của Fish-shell</h2>
-<pre><code>Để thay đổi lời nhắn, gõ:
+<p>Theo mặc định, fish khởi động cùng một dòng tin nhắn mặc định, và bạn hoàn toàn có thể thay thế nó bằng cách</p>
+<pre><code>
 $ set fish_greeting : &lt;messeage&gt;
 
 </code></pre><p><img src="https://i.imgur.com/oNGHBUP.png" alt="fish_mess"></p>
@@ -213,11 +218,11 @@ Gõ <code>sudo nano ~/.dircolors</code></p>
 <i class="fa fa-link" aria-hidden="true"></i>
 Kết quả:
 <img src="https://i.imgur.com/s6gjBgx.png" alt="ls"></p>
-<h2 id="tich-hợp-vào-windows-terminal">Tich hợp vào Windows Terminal</h2>
-<p><img src="https://i.imgur.com/ZKoKGbp.png" alt="control-panel-ws"></p>
+<h2 id="tích-hợp-vào-windows-terminal">Tích hợp vào Windows Terminal</h2>
+<p>Nói sơ qua về ứng dụng Windows Terminal thì đây là terminal mới nhất do Microsoft phát triển và bảo trì với những tính năng hay ho như khả năng đa nhiệm của &ldquo;em nó&rdquo;. Bạn có thể sử dụng wsl song song Powershell thông qua hệ thống tab có sẵn trong Terminal như đang lướt web vậy. Khá tiện lợi phải không?. Ngoài những shell mặc định mà nó cung cấp, bạn còn có thể tự tích hợp vào những command shell từ bên ngoài như cmder,&hellip; và mình thích nhất tính năng này của Terminal.</p>
+<p><img src="https://i.imgur.com/ZKoKGbp.png" alt="control-panel-ws">
+Tuỳ chỉnh Terminal:</p>
 <ul>
-<li>Tải Windows Terminal trên Windows Store
-Tuỳ chỉnh Terminal:</li>
 <li><strong>Start up:-&gt; Default profile:</strong> Ubuntu</li>
 <li><strong>Profiles:-&gt; Ubuntu-&gt; Commandline:</strong> <code>wsl.exe -d Ubuntu</code></li>
 </ul>
