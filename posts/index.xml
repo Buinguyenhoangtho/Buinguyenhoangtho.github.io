@@ -6,18 +6,7 @@
     <description>Recent content in Posts on Blog của tôi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>VN-vi</language>
-    <lastBuildDate>Thu, 10 Jun 2021 11:21:22 +0000</lastBuildDate><atom:link href="http://buinguyenhoangtho.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>WSL2&#43;oh My Fish Tmux= awsome terminal!</title>
-      <link>http://buinguyenhoangtho.github.io/bai-viet/wsl2-fish-tmux-awsome-terminal/</link>
-      <pubDate>Thu, 10 Jun 2021 11:21:22 +0000</pubDate>
-      
-      <guid>http://buinguyenhoangtho.github.io/bai-viet/wsl2-fish-tmux-awsome-terminal/</guid>
-      <description>Giới thiệu: Hôm nay mình sẽ hướng dẫn cách cài đặt và tuỳ chỉnh WSL2 một cách đơn giản nhất, không phức tạp cầu kì và cách tích hợp WSL2 vào Terminal Cập nhật ngày 13/06/2021: sửa lỗi chính tả, châu chuốt câu cú v..v
-CÀI ĐẶT WSL2 trên Windows 10 Yêu cầu
- Window 10: Version 1903 or higher, with Build 18362 or higher. Mở powershell (run as Admin) và chạy lệnh:</description>
-    </item>
-    
+    <lastBuildDate>Tue, 09 Mar 2021 09:34:22 +0000</lastBuildDate><atom:link href="http://buinguyenhoangtho.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Độ lại giao diện cmder giống Ubuntu đến 95%</title>
       <link>http://buinguyenhoangtho.github.io/bai-viet/do-lai-giao-dien-cmder-giong-ubuntu-den-95/</link>

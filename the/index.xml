@@ -6,31 +6,22 @@
     <description>Recent content in Thẻ on Blog của tôi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>VN-vi</language>
-    <lastBuildDate>Thu, 10 Jun 2021 11:21:22 +0000</lastBuildDate><atom:link href="http://buinguyenhoangtho.github.io/the/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Linux</title>
-      <link>http://buinguyenhoangtho.github.io/the/linux/</link>
-      <pubDate>Thu, 10 Jun 2021 11:21:22 +0000</pubDate>
-      
-      <guid>http://buinguyenhoangtho.github.io/the/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>WINDOWS</title>
-      <link>http://buinguyenhoangtho.github.io/the/windows/</link>
-      <pubDate>Thu, 10 Jun 2021 11:21:22 +0000</pubDate>
-      
-      <guid>http://buinguyenhoangtho.github.io/the/windows/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Tue, 09 Mar 2021 09:34:22 +0000</lastBuildDate><atom:link href="http://buinguyenhoangtho.github.io/the/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MẸO</title>
       <link>http://buinguyenhoangtho.github.io/the/m%E1%BA%B9o/</link>
       <pubDate>Tue, 09 Mar 2021 09:34:22 +0000</pubDate>
       
       <guid>http://buinguyenhoangtho.github.io/the/m%E1%BA%B9o/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WINDOWS</title>
+      <link>http://buinguyenhoangtho.github.io/the/windows/</link>
+      <pubDate>Tue, 09 Mar 2021 09:34:22 +0000</pubDate>
+      
+      <guid>http://buinguyenhoangtho.github.io/the/windows/</guid>
       <description></description>
     </item>
     
